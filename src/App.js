@@ -33,7 +33,7 @@ class App extends React.Component {
     super(props);
     // TODO this is janktown routing
     const path = window.location.pathname.slice(1).toLowerCase();
-    const currentArea = Areas[path] ? path : "sf";
+    const currentArea = Areas[path] ? path : "CPT";
 
     this.state = {
       faqVisible: false,
@@ -88,7 +88,13 @@ class App extends React.Component {
               }}
             />
             <Row className="hero-row">
-              <div style={{ maxWidth: "1100px", margin: "0px auto", minWidth: "0" }}>
+              <div
+                style={{
+                  maxWidth: "1100px",
+                  margin: "0px auto",
+                  minWidth: "0"
+                }}
+              >
                 <Row className="top-header" justify="center">
                   <Col span={24} offset={0}>
                     <Title style={{ float: "left", color: "white" }} level={4}>
