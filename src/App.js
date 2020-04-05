@@ -145,8 +145,8 @@ class App extends React.Component {
                     level={1}
                     style={{ color: "white", textAlign: "center" }}
                   >
-                    Your favorite Bay Area restaurant might close forever. Help
-                    save it.
+                    Your favorite South African restaurant might close forever.
+                    Help save it.
                   </Title>
                   <div className="header-sans">
                     Gift cards help "flatten the curve" of lost income from
