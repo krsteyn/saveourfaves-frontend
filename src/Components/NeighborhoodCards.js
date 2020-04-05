@@ -17,13 +17,9 @@ function AreaDropdown(props) {
         props.updateArea(newArea);
       }}
     >
-      <option value="sf">San Francisco</option>
-      <option value="eastbay">East Bay</option>
-      <option value="marin">Marin</option>
-      <option value="southbay">South Bay</option>
-      {Areas.map((key, value) => {
-        return <li key={key}>{value}</li>;
-      })}
+      <option value="CPT">Cape Town</option>
+      <option value="JHB">Johannesburg</option>
+      <option value="DBN">Durban</option>
     </select>
   );
 }
@@ -44,6 +40,7 @@ export class NeighborhoodCards extends React.Component {
     };
     this.ref = React.createRef();
   }
+
   neighborhoodsForArea = area => {
     function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
@@ -51,6 +48,7 @@ export class NeighborhoodCards extends React.Component {
         [array[i], array[j]] = [array[j], array[i]];
       }
     }
+
     const neighborhoods = Neighborhoods[area] || [];
     if (neighborhoods && neighborhoods.length > 0) {
       shuffleArray(neighborhoods);
@@ -83,6 +81,7 @@ export class NeighborhoodCards extends React.Component {
   updateWindowDimensions = () => {
     this.setState({ windowWidth: window.innerWidth });
   };
+
   fetchSuggestionsForNeighborhood(neighborhood, ref, fetchOffset) {
     this.setState({ loading: true });
     axios
@@ -110,6 +109,7 @@ export class NeighborhoodCards extends React.Component {
         ref.setState({ loading: false });
       });
   }
+
   loadMoreForCurrentNeighborhood() {
     this.fetchSuggestionsForNeighborhood(
       this.state.selectedNeighborhood,
@@ -117,6 +117,7 @@ export class NeighborhoodCards extends React.Component {
       this.state.fetchOffset
     );
   }
+
   getCardsForCurrentPage() {
     const neighborhoodCards = this.state.neighborhoods
       .slice(this.state.offset)
@@ -161,6 +162,7 @@ export class NeighborhoodCards extends React.Component {
       });
     return neighborhoodCards;
   }
+
   render() {
     return (
       <>
