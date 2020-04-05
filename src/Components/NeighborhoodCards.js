@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography } from "antd";
 import Neighborhoods from "../CityData/Neighborhoods";
+import Areas from "../CityData/Areas";
 import axios from "axios";
 import { SuggestedPlaceCards } from "./SuggestedPlaceCards";
 
@@ -20,6 +21,9 @@ function AreaDropdown(props) {
       <option value="eastbay">East Bay</option>
       <option value="marin">Marin</option>
       <option value="southbay">South Bay</option>
+      {Areas.map((key, value) => {
+        return <li key={key}>{value}</li>;
+      })}
     </select>
   );
 }
