@@ -111,7 +111,7 @@ h4 {
 }
 .header-button {
   color: $primary-color;
-  background-color: white;
+  background-color: $secondary-color;
   position: relative;
   bottom: 2px;
 }
@@ -130,7 +130,7 @@ h4 {
 
 .secondary-button {
   border: 0;
-  color: $tertiary-text !important;
+  color: $secondary-color !important;
   background-color: $tertiary-color !important;
 }
 
