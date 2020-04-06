@@ -259,6 +259,16 @@ class App extends React.Component {
                 </Row>
                 <Row className="footer-menu">
                   <Col
+                    xs={2}
+                    sm={2}
+                    md={2}
+                    lg={2}
+                    xl={2}
+                    style={{ textAlign: "left" }}
+                  >
+                    <div></div>
+                  </Col>
+                  <Col
                     offset={2}
                     xs={18}
                     sm={18}
@@ -267,7 +277,7 @@ class App extends React.Component {
                     xl={9}
                     style={{ textAlign: "left" }}
                   >
-                    <img src="/footer-logo.png" />
+                    <img className="header-logo" src="/footer-logo.png" />
                   </Col>
                   <Col
                     offset={2}
@@ -314,8 +324,28 @@ class App extends React.Component {
                       </li>
                     </ul>
                   </Col>
+                  <Col
+                    xs={2}
+                    sm={2}
+                    md={2}
+                    lg={2}
+                    xl={2}
+                    style={{ textAlign: "left" }}
+                  >
+                    <div></div>
+                  </Col>
                 </Row>
                 <Row className="footer-row">
+                  <Col
+                    xs={2}
+                    sm={2}
+                    md={2}
+                    lg={2}
+                    xl={2}
+                    style={{ textAlign: "left" }}
+                  >
+                    <div></div>
+                  </Col>
                   <Col
                     offset={2}
                     xs={18}
@@ -337,6 +367,16 @@ class App extends React.Component {
                     style={{ textAlign: "left" }}
                   >
                     <p>Copyright saveyourlocal 2020</p>
+                  </Col>
+                  <Col
+                    xs={2}
+                    sm={2}
+                    md={2}
+                    lg={2}
+                    xl={2}
+                    style={{ textAlign: "left" }}
+                  >
+                    <div></div>
                   </Col>
                 </Row>
               </div>
