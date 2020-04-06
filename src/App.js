@@ -222,6 +222,7 @@ class App extends React.Component {
                 </Row>
               </div>
             </Row>
+            <Row className="footer-row"></Row>
           </div>
         </div>
         <GoogleAnalyticsTag analyticsID={Config.GoogleAnalyticsID} />
