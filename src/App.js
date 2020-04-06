@@ -98,7 +98,7 @@ class App extends React.Component {
                 <Row className="top-header" justify="center">
                   <Col span={24} offset={0}>
                     <Title style={{ float: "left", color: "white" }} level={4}>
-                      <img src="/landscape-logo.png" />
+                      <img src="/landscape-logo.png" className="header-logo" />
                     </Title>
                     <div style={{ float: "right" }}>
                       <a href="#">
