@@ -149,7 +149,7 @@ class App extends React.Component {
                     Help save it.
                   </Title>
                   <div className="header-sans">
-                    Gift cards help "flatten the curve" of lost income from
+                    Vouchers help "flatten the curve" of lost income from
                     COVID-19.
                   </div>
                 </Col>
@@ -196,7 +196,7 @@ class App extends React.Component {
                     <p>
                       Our small businesses need us more than ever. Even though
                       we can’t leave home, we can still support local
-                      restaurants by buying gift cards. It’s basically a
+                      restaurants by buying vouchers. It’s basically a
                       mini-loan, so buy one now and make a plan to use it later.
                     </p>
                   </Col>

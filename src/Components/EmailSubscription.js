@@ -134,7 +134,7 @@ export class EmailSubscription extends React.Component {
           className={this.props.buttonClass}
           type="default"
         >
-          Request Gift Card
+          Request Voucher
         </Button>
       </Popover>
     );

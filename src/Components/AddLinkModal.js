@@ -38,7 +38,7 @@ export function AddLinkModal(props) {
     <Modal
       title={
         <span>
-          Add a Gift Card link for <b>{props.place.name}</b>
+          Add a Voucher link for <b>{props.place.name}</b>
         </span>
       }
       visible={props.shouldShow}
@@ -65,7 +65,7 @@ export function AddLinkModal(props) {
             setGiftLink(event.target.value);
           }}
           type="text"
-          placeholder="Please paste in the link to their gift card site"
+          placeholder="Please paste in the link to their voucher site"
           value={giftLink}
         />
       )}

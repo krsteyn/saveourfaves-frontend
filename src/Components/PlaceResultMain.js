@@ -84,8 +84,8 @@ export class PlaceResultMain extends React.Component {
             >
               {place.giftCardURL && (
                 <p>
-                  {place.name} offers gift cards online. Consider prepaying for
-                  a month of spending.
+                  {place.name} offers vouchers online. Consider prepaying for a
+                  month of spending.
                 </p>
               )}
               {!place.giftCardURL && place.emailContact && (
@@ -93,7 +93,7 @@ export class PlaceResultMain extends React.Component {
               )}
               {!place.giftCardURL && !place.emailContact && (
                 <p>
-                  Do they have a link to sell gift cards?{" "}
+                  Do they have a link to sell vouchers?{" "}
                   <a
                     className="app-link"
                     onClick={() => this.setState({ showAddModal: true })}

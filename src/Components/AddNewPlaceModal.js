@@ -116,7 +116,7 @@ export function AddNewPlaceModal(props) {
               setGiftLink(event.target.value);
             }}
             type="text"
-            placeholder="Gift Card Link (if you know it)"
+            placeholder="Voucher Link (if you know it)"
             value={giftLink}
           />
           <input
