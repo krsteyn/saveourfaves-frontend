@@ -288,10 +288,13 @@ class App extends React.Component {
                     xl={9}
                     style={{ textAlign: "left" }}
                   >
-                    <Title level={3}>Quick Menu</Title>
+                    <Title level={3} style={{ color: white }}>
+                      Quick Menu
+                    </Title>
                     <ul className="menu-list">
                       <li>
                         <a
+                          style={{ color: white }}
                           onClick={() => {
                             this.showPrivacyModal();
                           }}
@@ -301,6 +304,7 @@ class App extends React.Component {
                       </li>
                       <li>
                         <a
+                          style={{ color: white }}
                           onClick={() => {
                             this.showTermsModal();
                           }}
@@ -309,12 +313,17 @@ class App extends React.Component {
                         </a>
                       </li>
                       <li>
-                        <a target="_self" href={Constants.AddPlaceURL}>
+                        <a
+                          style={{ color: white }}
+                          target="_self"
+                          href={Constants.AddPlaceURL}
+                        >
                           Register your local
                         </a>
                       </li>
                       <li>
                         <a
+                          style={{ color: white }}
                           onClick={() => {
                             this.showFAQModal();
                           }}
