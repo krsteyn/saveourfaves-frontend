@@ -3,7 +3,7 @@
 
 body {
   margin: 0;
-  font-family: "open sans", -apple-system, blinkmacsystemfont, "segoe ui",
+  font-family: "Helvetica", -apple-system, blinkmacsystemfont, "segoe ui",
     "roboto", "oxygen", "ubuntu", "cantarell", "fira sans", "droid sans",
     "helvetica neue", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -188,12 +188,12 @@ h4.ant-typography {
 .top-header h4 {
   color: white !important;
   font-weight: 400;
-  font-family: "open sans", sans-serif;
+  font-family: "Helvetica", sans-serif;
 }
 
 div.header-sans {
   color: white;
-  font-family: "open sans", sans-serif;
+  font-family: "Helvetica", sans-serif;
   font-size: 1.6em;
 }
 
@@ -297,7 +297,7 @@ div.header-sans {
   padding: 0px 6px 16px 6px;
   font-variant: small-caps;
   color: $primary-color;
-  font-family: "Open Sans";
+  font-family: "Helvetica";
   font-weight: 800;
   cursor: pointer;
   font-size: 0.9em;
@@ -487,7 +487,7 @@ div.header-sans {
 }
 
 .neighborhood-card-title {
-  font-family: "roboto slab", serif;
+  font-family: "Helvetica", serif;
   font-size: 1.1em;
   text-overflow: ellipsis;
   white-space: pre-wrap;
@@ -579,7 +579,7 @@ div.header-sans {
 }
 
 .react-autosuggest__input {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Helvetica", sans-serif;
   color: $text-color;
   font-weight: 500;
   font-size: 16px;

@@ -215,8 +215,8 @@ class App extends React.Component {
                       repayments, insurance, supplies, repairs – the list goes
                       on. Even successful restaurants have razor thin margins of
                       3-5%, and a third have struggled to pay employees at least
-                      once. The “shelter-in-place” ordinance keeping customers
-                      at home could tip the balance into bankruptcy.
+                      once. The lock down keeping customers at home could tip
+                      the balance into bankruptcy.
                     </p>
                   </Col>
                 </Row>
