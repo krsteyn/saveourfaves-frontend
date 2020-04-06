@@ -3,7 +3,7 @@
 
 body {
   margin: 0;
-  font-family: "Helvetica", -apple-system, blinkmacsystemfont, "segoe ui",
+  font-family: "helvetica", -apple-system, blinkmacsystemfont, "segoe ui",
     "roboto", "oxygen", "ubuntu", "cantarell", "fira sans", "droid sans",
     "helvetica neue", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -19,7 +19,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "roboto slab", serif;
+  font-family: "helvetica", serif;
   font-weight: 400;
 }
 
@@ -116,6 +116,14 @@ h4 {
   bottom: 2px;
 }
 
+.header-button:hover,
+.header-button:active {
+  color: $primary-color;
+  background-color: $secondary-color;
+  position: relative;
+  bottom: 2px;
+}
+
 @media only screen and (max-width: 700px) {
   .header-share-link {
     display: none !important;
@@ -164,7 +172,7 @@ h4.suggestion-title {
 }
 
 h4.section-title {
-  font-family: "open sans", sans-serif;
+  font-family: "helvetica", sans-serif;
   font-size: 1.1em;
   font-weight: 400;
   padding-top: 0px;
@@ -188,12 +196,12 @@ h4.ant-typography {
 .top-header h4 {
   color: white !important;
   font-weight: 400;
-  font-family: "Helvetica", sans-serif;
+  font-family: "helvetica", sans-serif;
 }
 
 div.header-sans {
   color: white;
-  font-family: "Helvetica", sans-serif;
+  font-family: "helvetica", sans-serif;
   font-size: 1.6em;
 }
 
@@ -297,7 +305,7 @@ div.header-sans {
   padding: 0px 6px 16px 6px;
   font-variant: small-caps;
   color: $primary-color;
-  font-family: "Helvetica";
+  font-family: "helvetica";
   font-weight: 800;
   cursor: pointer;
   font-size: 0.9em;
@@ -487,7 +495,7 @@ div.header-sans {
 }
 
 .neighborhood-card-title {
-  font-family: "Helvetica", serif;
+  font-family: "helvetica", serif;
   font-size: 1.1em;
   text-overflow: ellipsis;
   white-space: pre-wrap;
@@ -579,7 +587,7 @@ div.header-sans {
 }
 
 .react-autosuggest__input {
-  font-family: "Helvetica", sans-serif;
+  font-family: "helvetica", sans-serif;
   color: $text-color;
   font-weight: 500;
   font-size: 16px;
@@ -623,7 +631,7 @@ div.header-sans {
   width: 100%;
   border: 1px solid lightgray;
   background-color: #fff;
-  font-family: Helvetica, sans-serif;
+  font-family: "helvetica", sans-serif;
   font-weight: 500;
   font-size: 16px;
   border-bottom-left-radius: 4px;
