@@ -476,7 +476,7 @@ div.header-sans {
   height: 120px;
   border-radius: 80px;
   background-position: center center;
-  background-color: $tertiary-color;
+  background-color: $red-color;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -492,6 +492,7 @@ div.header-sans {
 .neighborhood-card-image:hover {
   cursor: pointer;
   box-shadow: 0 0 4px darkslategray;
+  background-color: $blue-color;
 }
 
 .neighborhood-card-title {

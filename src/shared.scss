@@ -1,7 +1,11 @@
+$red-color: #e73231;
+$blue-color: #3764ae;
+$green-color: #189e49;
+$yellow-color: #f7d311;
 $primary-color: black;
-$secondary-color: yellow;
-$tertiary-color: green;
-$tertiary-text: #00796f;
+$secondary-color: $yellow-color;
+$tertiary-color: $green-color;
+$tertiary-text: black;
 
 $max-content-width: 850px;
 $search-text-color: #626262;
