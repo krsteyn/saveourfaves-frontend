@@ -261,10 +261,10 @@ class App extends React.Component {
             </Row>
             <Row className="body-row"></Row>
             <Row className="footer-menu">
-              <Col offset={5} span={10} style={{ textAlign: "left" }}>
+              <Col offset={5} span={9} style={{ textAlign: "left" }}>
                 <img className="footer-logo" src="/footer-logo.png" />
               </Col>
-              <Col offset={0} span={10} style={{ textAlign: "left" }}>
+              <Col offset={0} span={9} style={{ textAlign: "left" }}>
                 <div>
                   <Title level={3} style={{ color: "white" }}>
                     Quick Menu
@@ -314,10 +314,12 @@ class App extends React.Component {
               </Col>
             </Row>
             <Row className="footer-row">
-              <Col offset={5} span={10} style={{ textAlign: "left" }}>
-                <div></div>
+              <Col offset={5} span={9} style={{ textAlign: "left" }}>
+                <div>
+                  <br />
+                </div>
               </Col>
-              <Col offset={0} span={10} style={{ textAlign: "left" }}>
+              <Col offset={0} span={9} style={{ textAlign: "left" }}>
                 <div>
                   <p>Copyright saveyourlocal 2020</p>
                 </div>
