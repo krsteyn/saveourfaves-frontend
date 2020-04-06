@@ -259,6 +259,7 @@ class App extends React.Component {
                 </Row>
               </div>
             </Row>
+            <Row className="body-row"></Row>
             <Row className="footer-menu">
               <Col offset={2} span={22} style={{ textAlign: "left" }}>
                 <img className="footer-logo" src="/footer-logo.png" />
