@@ -288,13 +288,13 @@ class App extends React.Component {
                     xl={9}
                     style={{ textAlign: "left" }}
                   >
-                    <Title level={3} style={{ color: white }}>
+                    <Title level={3} style="color: white">
                       Quick Menu
                     </Title>
                     <ul className="menu-list">
                       <li>
                         <a
-                          style={{ color: white }}
+                          style="color: white"
                           onClick={() => {
                             this.showPrivacyModal();
                           }}
@@ -304,7 +304,7 @@ class App extends React.Component {
                       </li>
                       <li>
                         <a
-                          style={{ color: white }}
+                          style="color: white"
                           onClick={() => {
                             this.showTermsModal();
                           }}
@@ -314,7 +314,7 @@ class App extends React.Component {
                       </li>
                       <li>
                         <a
-                          style={{ color: white }}
+                          style="color: white"
                           target="_self"
                           href={Constants.AddPlaceURL}
                         >
@@ -323,7 +323,7 @@ class App extends React.Component {
                       </li>
                       <li>
                         <a
-                          style={{ color: white }}
+                          style="color: white"
                           onClick={() => {
                             this.showFAQModal();
                           }}
