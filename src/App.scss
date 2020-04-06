@@ -116,6 +116,10 @@ h4 {
   bottom: 2px;
 }
 
+.header-logo {
+  max-width: 65%;
+}
+
 .header-button:hover,
 .header-button:active {
   color: $primary-color;
