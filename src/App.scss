@@ -104,6 +104,12 @@ h4 {
   color: $tertiary-text !important;
 }
 
+.menu-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .call-to-action-outer {
   text-align: right;
   margin-left: 20px;

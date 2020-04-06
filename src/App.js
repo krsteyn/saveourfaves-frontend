@@ -289,7 +289,7 @@ class App extends React.Component {
                     style={{ textAlign: "left" }}
                   >
                     <Title level={3}>Quick Menu</Title>
-                    <ul>
+                    <ul className="menu-list">
                       <li>
                         <a
                           onClick={() => {
