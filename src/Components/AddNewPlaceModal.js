@@ -72,7 +72,7 @@ export function AddNewPlaceModal(props) {
   }
   return (
     <Modal
-      title={<span>Add a New Bay Area Small Business</span>}
+      title={<span>Add a New Small Business</span>}
       visible={props.shouldShow}
       onOk={args => {
         counter === 0 ? handleLinkSubmission() : resetAndClose();
@@ -135,7 +135,7 @@ export function AddNewPlaceModal(props) {
                 setShowDonationInput(true);
               }}
             >
-              [+] Add a donation/GoFundMe link
+              [+] Add a donation/BackaBuddy link
             </a>
             <input
               className="add-link-modal-input"
@@ -144,7 +144,7 @@ export function AddNewPlaceModal(props) {
               }}
               style={{ display: showDonationInput ? "block" : "none" }}
               type="text"
-              placeholder="Donation/GoFundMe Link"
+              placeholder="Donation/BackaBuddy Link"
               value={donationLink}
             />
           </div>
