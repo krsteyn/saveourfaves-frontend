@@ -42,7 +42,7 @@ export class PlaceAutosuggestion extends React.Component {
     if (suggestion.special) {
       return (
         <div>
-          <div>Don't see your fave?</div>
+          <div>Don't see your local?</div>
           <div>
             <a
               onClick={() => {
@@ -82,7 +82,9 @@ export class PlaceAutosuggestion extends React.Component {
   };
   renderInputComponent = inputProps => (
     <div className="react-autosuggest__wrapper">
-      <div className="react-autosuggest__left-icon">🍽</div>
+      <div className="react-autosuggest__left-icon">
+        <img src="/icon.png" />
+      </div>
       <input {...inputProps} />
     </div>
   );
@@ -90,7 +92,7 @@ export class PlaceAutosuggestion extends React.Component {
   render() {
     const { value, suggestions } = this.state;
     const inputProps = {
-      placeholder: "‍Search for a Bay Area restaurant, coffee...",
+      placeholder: "‍Search for a restaurant, coffee...",
       value,
       onChange: this.onChange,
       onFocus: event => {
