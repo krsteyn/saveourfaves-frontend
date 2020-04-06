@@ -220,175 +220,135 @@ class App extends React.Component {
                     </div>
                   </div>
                 </Col>
-                <Row className="footer-content">
-                  <Col
-                    offset={2}
-                    xs={18}
-                    sm={18}
-                    md={9}
-                    lg={9}
-                    xl={9}
-                    style={{ textAlign: "left" }}
-                  >
-                    <Title level={3}>Our duty as loyal customers</Title>
-                    <p>
-                      Our small businesses need us more than ever. Even though
-                      we can't leave home, we can still support our local
-                      restaurants, and other small businesses by buying a
-                      voucher now, use it later.
-                    </p>
-                  </Col>
-                  <Col
-                    offset={2}
-                    xs={18}
-                    sm={18}
-                    md={9}
-                    lg={9}
-                    xl={9}
-                    style={{ textAlign: "left" }}
-                  >
-                    <Title level={3}>3 weeks can kill a business</Title>
-                    <p>
-                      Restaurants have many fixed costs: rent, labour, loan
-                      repayments, insurance, supplies, repairs - and the list
-                      goes on. Even successful small businesses have very thin
-                      margins of 3-5%. The lockdown is keeping customers at
-                      home, and tipping the balance towards bankruptcy.
-                    </p>
-                  </Col>
-                </Row>
-                <Row className="footer-menu">
-                  <Col
-                    xs={2}
-                    sm={2}
-                    md={2}
-                    lg={2}
-                    xl={2}
-                    style={{ textAlign: "left" }}
-                  >
-                    <div></div>
-                  </Col>
-                  <Col
-                    offset={2}
-                    xs={18}
-                    sm={18}
-                    md={9}
-                    lg={9}
-                    xl={9}
-                    style={{ textAlign: "left" }}
-                  >
-                    <img className="header-logo" src="/footer-logo.png" />
-                  </Col>
-                  <Col
-                    offset={2}
-                    xs={18}
-                    sm={18}
-                    md={9}
-                    lg={9}
-                    xl={9}
-                    style={{ textAlign: "left" }}
-                  >
-                    <Title level={3} style={{ color: "white" }}>
-                      Quick Menu
-                    </Title>
-                    <ul className="menu-list">
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          onClick={() => {
-                            this.showPrivacyModal();
-                          }}
-                        >
-                          Privacy Policy
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          onClick={() => {
-                            this.showTermsModal();
-                          }}
-                        >
-                          Terms and Conditions
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          target="_self"
-                          href={Constants.AddPlaceURL}
-                        >
-                          Register your local
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          onClick={() => {
-                            this.showFAQModal();
-                          }}
-                        >
-                          FAQ
-                        </a>
-                      </li>
-                    </ul>
-                  </Col>
-                  <Col
-                    xs={2}
-                    sm={2}
-                    md={2}
-                    lg={2}
-                    xl={2}
-                    style={{ textAlign: "left" }}
-                  >
-                    <div></div>
-                  </Col>
-                </Row>
-                <Row className="footer-row">
-                  <Col
-                    xs={2}
-                    sm={2}
-                    md={2}
-                    lg={2}
-                    xl={2}
-                    style={{ textAlign: "left" }}
-                  >
-                    <div></div>
-                  </Col>
-                  <Col
-                    offset={2}
-                    xs={18}
-                    sm={18}
-                    md={9}
-                    lg={9}
-                    xl={9}
-                    style={{ textAlign: "left" }}
-                  >
-                    <p></p>
-                  </Col>
-                  <Col
-                    offset={2}
-                    xs={18}
-                    sm={18}
-                    md={9}
-                    lg={9}
-                    xl={9}
-                    style={{ textAlign: "left" }}
-                  >
-                    <p>Copyright saveyourlocal 2020</p>
-                  </Col>
-                  <Col
-                    xs={2}
-                    sm={2}
-                    md={2}
-                    lg={2}
-                    xl={2}
-                    style={{ textAlign: "left" }}
-                  >
-                    <div></div>
-                  </Col>
-                </Row>
               </div>
+              <Row className="footer-content">
+                <Col
+                  offset={2}
+                  xs={18}
+                  sm={18}
+                  md={9}
+                  lg={9}
+                  xl={9}
+                  style={{ textAlign: "left" }}
+                >
+                  <Title level={3}>Our duty as loyal customers</Title>
+                  <p>
+                    Our small businesses need us more than ever. Even though we
+                    can't leave home, we can still support our local
+                    restaurants, and other small businesses by buying a voucher
+                    now, use it later.
+                  </p>
+                </Col>
+                <Col
+                  offset={2}
+                  xs={18}
+                  sm={18}
+                  md={9}
+                  lg={9}
+                  xl={9}
+                  style={{ textAlign: "left" }}
+                >
+                  <Title level={3}>3 weeks can kill a business</Title>
+                  <p>
+                    Restaurants have many fixed costs: rent, labour, loan
+                    repayments, insurance, supplies, repairs - and the list goes
+                    on. Even successful small businesses have very thin margins
+                    of 3-5%. The lockdown is keeping customers at home, and
+                    tipping the balance towards bankruptcy.
+                  </p>
+                </Col>
+              </Row>
+              <Row className="footer-menu">
+                <Col
+                  offset={2}
+                  xs={18}
+                  sm={18}
+                  md={9}
+                  lg={9}
+                  xl={9}
+                  style={{ textAlign: "left" }}
+                >
+                  <img className="footer-logo" src="/footer-logo.png" />
+                </Col>
+                <Col
+                  offset={2}
+                  xs={18}
+                  sm={18}
+                  md={9}
+                  lg={9}
+                  xl={9}
+                  style={{ textAlign: "left" }}
+                >
+                  <Title level={3} style={{ color: "white" }}>
+                    Quick Menu
+                  </Title>
+                  <ul className="menu-list">
+                    <li>
+                      <a
+                        style={{ color: "white" }}
+                        onClick={() => {
+                          this.showPrivacyModal();
+                        }}
+                      >
+                        Privacy Policy
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        style={{ color: "white" }}
+                        onClick={() => {
+                          this.showTermsModal();
+                        }}
+                      >
+                        Terms and Conditions
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        style={{ color: "white" }}
+                        target="_self"
+                        href={Constants.AddPlaceURL}
+                      >
+                        Register your local
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        style={{ color: "white" }}
+                        onClick={() => {
+                          this.showFAQModal();
+                        }}
+                      >
+                        FAQ
+                      </a>
+                    </li>
+                  </ul>
+                </Col>
+              </Row>
+              <Row className="footer-row">
+                <Col
+                  offset={2}
+                  xs={18}
+                  sm={18}
+                  md={9}
+                  lg={9}
+                  xl={9}
+                  style={{ textAlign: "left" }}
+                >
+                  <p></p>
+                </Col>
+                <Col
+                  offset={2}
+                  xs={18}
+                  sm={18}
+                  md={9}
+                  lg={9}
+                  xl={9}
+                  style={{ textAlign: "left" }}
+                >
+                  <p>Copyright saveyourlocal 2020</p>
+                </Col>
+              </Row>
             </Row>
           </div>
         </div>
