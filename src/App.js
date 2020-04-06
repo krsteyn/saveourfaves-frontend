@@ -9,10 +9,13 @@ import Config from "./Config";
 import GoogleAnalyticsTag from "./Components/GoogleAnalyticsTag";
 import FAQModal from "./Components/FAQModal";
 import AddNewPlaceModal from "./Components/AddNewPlaceModal";
+import TermsModal from "./Components/TermsModal";
+import PrivacyModal from "./Components/PrivacyModal";
 import LogEngagementEvent from "./Logging";
 import NeighborhoodCards from "./Components/NeighborhoodCards";
 import PlaceFilterDisplay from "./Components/PlaceFilterDisplay";
 import ShareOptions from "./Components/ShareOptions";
+import Constants from "./Constants";
 
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFTOKEN";
@@ -39,7 +42,9 @@ class App extends React.Component {
       faqVisible: false,
       shareVisible: true,
       currentArea: currentArea,
-      addPlaceVisible: path === "addplace"
+      addPlaceVisible: path === "addplace",
+      termsVisible: path === "terms",
+      privacyVisible: path === "privacy"
     };
 
     this.selfRef = React.createRef();
@@ -48,19 +53,40 @@ class App extends React.Component {
   showFAQModal() {
     this.setState({ faqVisible: true });
   }
+
   hideFAQModal() {
     this.setState({ faqVisible: false });
   }
+
+  showTermsModal() {
+    this.setState({ termsVisible: true });
+  }
+
+  hideTermsModal() {
+    this.setState({ termsVisible: false });
+  }
+
+  showPrivacyModal() {
+    this.setState({ privacyVisible: true });
+  }
+
+  hidePrivacyModal() {
+    this.setState({ privacyVisible: false });
+  }
+
   showShareModal() {
     this.setState({ shareVisible: true });
   }
+
   hideShareModal() {
     this.setState({ shareVisible: false });
   }
+
   hideAddModal() {
     window.history.pushState({}, "", "/");
     this.setState({ addPlaceVisible: false });
   }
+
   render() {
     return (
       <AreaContext.Provider
@@ -85,6 +111,18 @@ class App extends React.Component {
               shouldShow={this.state.addPlaceVisible}
               onClose={() => {
                 this.hideAddModal();
+              }}
+            />
+            <TermsModal
+              shouldShow={this.state.termsVisible}
+              onClose={() => {
+                this.hideTermsModal();
+              }}
+            />
+            <PrivacyModal
+              shouldShow={this.state.privacyVisible}
+              onClose={() => {
+                this.hidePrivacyModal();
               }}
             />
             <Row className="hero-row">
@@ -195,9 +233,9 @@ class App extends React.Component {
                     <Title level={3}>Our duty as loyal customers</Title>
                     <p>
                       Our small businesses need us more than ever. Even though
-                      we can’t leave home, we can still support local
-                      restaurants by buying vouchers. It’s basically a
-                      mini-loan, so buy one now and make a plan to use it later.
+                      we can't leave home, we can still support our local
+                      restaurants, and other small businesses by buying a
+                      voucher now, use it later.
                     </p>
                   </Col>
                   <Col
@@ -211,18 +249,98 @@ class App extends React.Component {
                   >
                     <Title level={3}>3 weeks can kill a business</Title>
                     <p>
-                      Restaurants have tons of fixed costs: rent, labor, loan
-                      repayments, insurance, supplies, repairs – the list goes
-                      on. Even successful restaurants have razor thin margins of
-                      3-5%, and a third have struggled to pay employees at least
-                      once. The lock down keeping customers at home could tip
-                      the balance into bankruptcy.
+                      Restaurants have many fixed costs: rent, labour, loan
+                      repayments, insurance, supplies, repairs - and the list
+                      goes on. Even successful small businesses have very thin
+                      margins of 3-5%. The lockdown is keeping customers at
+                      home, and tipping the balance towards bankruptcy.
                     </p>
                   </Col>
                 </Row>
               </div>
             </Row>
-            <Row className="footer-row"></Row>
+            <Row className="footer-menu">
+              <Col
+                offset={2}
+                xs={18}
+                sm={18}
+                md={9}
+                lg={9}
+                xl={9}
+                style={{ textAlign: "left" }}
+              >
+                <img src="/footer-logo.png" />
+              </Col>
+              <Col
+                offset={2}
+                xs={18}
+                sm={18}
+                md={9}
+                lg={9}
+                xl={9}
+                style={{ textAlign: "left" }}
+              >
+                <Title level={3}>Quick Menu</Title>
+                <ul>
+                  <li>
+                    <a
+                      onClick={() => {
+                        this.showPrivacyModal();
+                      }}
+                    >
+                      Privacy Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      onClick={() => {
+                        this.showTermsModal();
+                      }}
+                    >
+                      Terms and Conditions
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_self" href={Constants.AddPlaceURL}>
+                      Register your local
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      onClick={() => {
+                        this.showFAQModal();
+                      }}
+                    >
+                      FAQ
+                    </a>
+                  </li>
+                </ul>
+              </Col>
+            </Row>
+            <Row className="footer-row">
+              <Col
+                offset={2}
+                xs={18}
+                sm={18}
+                md={9}
+                lg={9}
+                xl={9}
+                style={{ textAlign: "left" }}
+              >
+                <p></p>
+              </Col>
+              <Col
+                offset={2}
+                xs={18}
+                sm={18}
+                md={9}
+                lg={9}
+                xl={9}
+                style={{ textAlign: "left" }}
+              >
+                <p>Copyright saveyourlocal 2020</p>
+              </Col>
+            </Row>
           </div>
         </div>
         <GoogleAnalyticsTag analyticsID={Config.GoogleAnalyticsID} />

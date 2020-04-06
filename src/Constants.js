@@ -1,5 +1,7 @@
 const Constants = {
-  AddPlaceURL: "/addplace"
+  AddPlaceURL: "/addplace",
+  TermsUrl: "/terms",
+  PrivacyPlaceURL: "/privacy"
 };
 
 export default Constants;
