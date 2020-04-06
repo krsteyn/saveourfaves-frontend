@@ -258,65 +258,65 @@ class App extends React.Component {
                   </Col>
                 </Row>
               </div>
-              <Row className="footer-menu">
-                <Col offset={2} span={22} style={{ textAlign: "left" }}>
-                  <img className="footer-logo" src="/footer-logo.png" />
-                  <div style={{ float: "right" }}>
-                    <Title level={3} style={{ color: "white" }}>
-                      Quick Menu
-                    </Title>
-                    <ul className="menu-list">
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          onClick={() => {
-                            this.showPrivacyModal();
-                          }}
-                        >
-                          Privacy Policy
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          onClick={() => {
-                            this.showTermsModal();
-                          }}
-                        >
-                          Terms and Conditions
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          target="_self"
-                          href={Constants.AddPlaceURL}
-                        >
-                          Register your local
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          onClick={() => {
-                            this.showFAQModal();
-                          }}
-                        >
-                          FAQ
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </Col>
-              </Row>
-              <Row className="footer-row">
-                <Col offset={2} span={22} style={{ textAlign: "left" }}>
-                  <div></div>
-                  <div style={{ float: "right" }}>
-                    <p>Copyright saveyourlocal 2020</p>
-                  </div>
-                </Col>
-              </Row>
+            </Row>
+            <Row className="footer-menu">
+              <Col offset={2} span={22} style={{ textAlign: "left" }}>
+                <img className="footer-logo" src="/footer-logo.png" />
+                <div style={{ float: "right" }}>
+                  <Title level={3} style={{ color: "white" }}>
+                    Quick Menu
+                  </Title>
+                  <ul className="menu-list">
+                    <li>
+                      <a
+                        style={{ color: "white" }}
+                        onClick={() => {
+                          this.showPrivacyModal();
+                        }}
+                      >
+                        Privacy Policy
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        style={{ color: "white" }}
+                        onClick={() => {
+                          this.showTermsModal();
+                        }}
+                      >
+                        Terms and Conditions
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        style={{ color: "white" }}
+                        target="_self"
+                        href={Constants.AddPlaceURL}
+                      >
+                        Register your local
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        style={{ color: "white" }}
+                        onClick={() => {
+                          this.showFAQModal();
+                        }}
+                      >
+                        FAQ
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </Col>
+            </Row>
+            <Row className="footer-row">
+              <Col offset={2} span={22} style={{ textAlign: "left" }}>
+                <div></div>
+                <div style={{ float: "right" }}>
+                  <p>Copyright saveyourlocal 2020</p>
+                </div>
+              </Col>
             </Row>
           </div>
         </div>
