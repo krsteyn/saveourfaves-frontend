@@ -261,7 +261,7 @@ class App extends React.Component {
             </Row>
             <Row className="body-row"></Row>
             <Row className="footer-menu">
-              <Col offset={2} span={10} style={{ textAlign: "left" }}>
+              <Col offset={5} span={10} style={{ textAlign: "left" }}>
                 <img className="footer-logo" src="/footer-logo.png" />
               </Col>
               <Col offset={0} span={10} style={{ textAlign: "left" }}>
@@ -314,7 +314,7 @@ class App extends React.Component {
               </Col>
             </Row>
             <Row className="footer-row">
-              <Col offset={2} span={10} style={{ textAlign: "left" }}>
+              <Col offset={5} span={10} style={{ textAlign: "left" }}>
                 <div></div>
               </Col>
               <Col offset={0} span={10} style={{ textAlign: "left" }}>
