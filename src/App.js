@@ -257,89 +257,89 @@ class App extends React.Component {
                     </p>
                   </Col>
                 </Row>
+                <Row className="footer-menu">
+                  <Col
+                    offset={2}
+                    xs={18}
+                    sm={18}
+                    md={9}
+                    lg={9}
+                    xl={9}
+                    style={{ textAlign: "left" }}
+                  >
+                    <img src="/footer-logo.png" />
+                  </Col>
+                  <Col
+                    offset={2}
+                    xs={18}
+                    sm={18}
+                    md={9}
+                    lg={9}
+                    xl={9}
+                    style={{ textAlign: "left" }}
+                  >
+                    <Title level={3}>Quick Menu</Title>
+                    <ul>
+                      <li>
+                        <a
+                          onClick={() => {
+                            this.showPrivacyModal();
+                          }}
+                        >
+                          Privacy Policy
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          onClick={() => {
+                            this.showTermsModal();
+                          }}
+                        >
+                          Terms and Conditions
+                        </a>
+                      </li>
+                      <li>
+                        <a target="_self" href={Constants.AddPlaceURL}>
+                          Register your local
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          onClick={() => {
+                            this.showFAQModal();
+                          }}
+                        >
+                          FAQ
+                        </a>
+                      </li>
+                    </ul>
+                  </Col>
+                </Row>
+                <Row className="footer-row">
+                  <Col
+                    offset={2}
+                    xs={18}
+                    sm={18}
+                    md={9}
+                    lg={9}
+                    xl={9}
+                    style={{ textAlign: "left" }}
+                  >
+                    <p></p>
+                  </Col>
+                  <Col
+                    offset={2}
+                    xs={18}
+                    sm={18}
+                    md={9}
+                    lg={9}
+                    xl={9}
+                    style={{ textAlign: "left" }}
+                  >
+                    <p>Copyright saveyourlocal 2020</p>
+                  </Col>
+                </Row>
               </div>
-            </Row>
-            <Row className="footer-menu">
-              <Col
-                offset={2}
-                xs={18}
-                sm={18}
-                md={9}
-                lg={9}
-                xl={9}
-                style={{ textAlign: "left" }}
-              >
-                <img src="/footer-logo.png" />
-              </Col>
-              <Col
-                offset={2}
-                xs={18}
-                sm={18}
-                md={9}
-                lg={9}
-                xl={9}
-                style={{ textAlign: "left" }}
-              >
-                <Title level={3}>Quick Menu</Title>
-                <ul>
-                  <li>
-                    <a
-                      onClick={() => {
-                        this.showPrivacyModal();
-                      }}
-                    >
-                      Privacy Policy
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      onClick={() => {
-                        this.showTermsModal();
-                      }}
-                    >
-                      Terms and Conditions
-                    </a>
-                  </li>
-                  <li>
-                    <a target="_self" href={Constants.AddPlaceURL}>
-                      Register your local
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      onClick={() => {
-                        this.showFAQModal();
-                      }}
-                    >
-                      FAQ
-                    </a>
-                  </li>
-                </ul>
-              </Col>
-            </Row>
-            <Row className="footer-row">
-              <Col
-                offset={2}
-                xs={18}
-                sm={18}
-                md={9}
-                lg={9}
-                xl={9}
-                style={{ textAlign: "left" }}
-              >
-                <p></p>
-              </Col>
-              <Col
-                offset={2}
-                xs={18}
-                sm={18}
-                md={9}
-                lg={9}
-                xl={9}
-                style={{ textAlign: "left" }}
-              >
-                <p>Copyright saveyourlocal 2020</p>
-              </Col>
             </Row>
           </div>
         </div>
