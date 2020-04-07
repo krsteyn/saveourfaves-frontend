@@ -9,6 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $secondary-color;
+  background-image: url("/bg-overlay.png");
 }
 
 body,
@@ -81,12 +82,24 @@ h4 {
   padding-top: 20px;
   overscroll-behavior: none;
 }
+.body-row {
+  height: 750px;
+}
 
 .footer-row {
   height: 150px;
   background-color: $primary-color;
   padding-top: 10px;
   overscroll-behavior: none;
+  color: white !important;
+}
+
+.footer-menu {
+  height: 150px;
+  background-color: $blue-color;
+  padding-top: 10px;
+  overscroll-behavior: none;
+  color: white !important;
 }
 
 .footer-content {
@@ -95,6 +108,22 @@ h4 {
 
 .footer-content h3 {
   color: $tertiary-text !important;
+}
+.footer-logo {
+  max-width: 19%;
+}
+
+.menu-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: white !important;
+  ul {
+    color: white !important;
+    li {
+      color: white !important;
+    }
+  }
 }
 
 .call-to-action-outer {
