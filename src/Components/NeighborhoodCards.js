@@ -52,9 +52,15 @@ export class NeighborhoodCards extends React.Component {
     return neighborhoods;
   };
 
-  componentDidMount = () => {
+  componentDidMount = async () => {
     this.updateWindowDimensions();
     window.addEventListener("resize", this.updateWindowDimensions);
+    let newNeighborhoods = await this.neighborhoodsForArea(
+      this.props.currentArea
+    );
+    this.setState({
+      neighborhoods: newNeighborhoods
+    });
     this.fetchSuggestionsForNeighborhood(this.state.neighborhoods[0], this, 0);
   };
   componentWillUnmount = () => {
