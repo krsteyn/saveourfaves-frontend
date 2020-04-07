@@ -29,6 +29,16 @@ function AreaDropdown(props) {
 export class NeighborhoodCards extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      suggestedPlaces: null,
+      selectedNeighborhood: null,
+      offset: 0,
+      fetchOffset: 0,
+      windowWidth: 0,
+      loading: true,
+      neighborhoods: [],
+      showingNeighborhoodsFor: props.currentArea
+    };
   }
 
   neighborhoodsForArea = async area => {
@@ -59,7 +69,8 @@ export class NeighborhoodCards extends React.Component {
       this.props.currentArea
     );
     this.setState({
-      neighborhoods: newNeighborhoods
+      neighborhoods: newNeighborhoods,
+      loading: true
     });
     this.fetchSuggestionsForNeighborhood(this.state.neighborhoods[0], this, 0);
   };
