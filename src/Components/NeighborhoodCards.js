@@ -29,29 +29,18 @@ function AreaDropdown(props) {
 export class NeighborhoodCards extends React.Component {
   constructor(props) {
     super(props);
-
-    this.request(props);
-
-    //       const neighborhoods = this.neighborhoodsForArea(props.currentArea);
-    //       this.state = {
-    //         suggestedPlaces: null,
-    //         selectedNeighborhood: neighborhoods,
-    //         offset: 0,
-    //         fetchOffset: 0,
-    //         windowWidth: 0,
-    //         loading: true,
-    //         neighborhoods: neighborhoods,
-    //         showingNeighborhoodsFor: props.currentArea
-    //       };
-    //       this.ref = React.createRef();
   }
 
-  neighborhoodsForArea = area => {
+  neighborhoodsForArea = async area => {
     function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
       }
+    }
+
+    if (!this.neighborhoodList || this.neighborhoodList.length == 0) {
+      this.neighborhoodList = await this.fetchNeighborhoodList(this);
     }
 
     //    const neighborhoods = Neighborhoods[area] || [];
@@ -90,26 +79,26 @@ export class NeighborhoodCards extends React.Component {
     this.setState({ windowWidth: window.innerWidth });
   };
 
-  request = async props => {
-    await this.fetchNeighborhoodList(this);
-    console.log("IA 123...");
-
-    const neighborhoods = this.neighborhoodsForArea(props.currentArea);
-
-    console.log("IA ...", neighborhoods);
-
-    this.state = {
-      suggestedPlaces: null,
-      selectedNeighborhood: neighborhoods[0],
-      offset: 0,
-      fetchOffset: 0,
-      windowWidth: 0,
-      loading: true,
-      neighborhoods: neighborhoods,
-      showingNeighborhoodsFor: props.currentArea
-    };
-    this.ref = React.createRef();
-  };
+  // request = async props => {
+  //   await this.fetchNeighborhoodList(this);
+  //   console.log("IA 123...");
+  //
+  //   const neighborhoods = this.neighborhoodsForArea(props.currentArea);
+  //
+  //   console.log("IA ...", neighborhoods);
+  //
+  //   this.state = {
+  //     suggestedPlaces: null,
+  //     selectedNeighborhood: neighborhoods[0],
+  //     offset: 0,
+  //     fetchOffset: 0,
+  //     windowWidth: 0,
+  //     loading: true,
+  //     neighborhoods: neighborhoods,
+  //     showingNeighborhoodsFor: props.currentArea
+  //   };
+  //   this.ref = React.createRef();
+  // };
 
   fetchSuggestionsForNeighborhood(neighborhood, ref, fetchOffset) {
     this.setState({ loading: true });
@@ -146,8 +135,7 @@ export class NeighborhoodCards extends React.Component {
         params: {}
       })
       .then(response => {
-        this.neighborhoodList = response.data;
-        console.log("IA >>> fa ", this.neighborhoodList);
+        return response.data;
       });
   }
 
