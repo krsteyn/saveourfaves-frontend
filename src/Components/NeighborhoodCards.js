@@ -210,7 +210,7 @@ export class NeighborhoodCards extends React.Component {
             />
           </Title>
         </div>
-        {!this.state.loading && (
+        {
           <section
             className="neighborhood-card-container"
             style={{
@@ -259,7 +259,7 @@ export class NeighborhoodCards extends React.Component {
               </a>
             )}
           </section>
-        )}
+        }
         {(this.state.loading ||
           (this.state.suggestedPlaces &&
             this.state.suggestedPlaces.length > 0)) && (
