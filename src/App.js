@@ -82,6 +82,10 @@ class App extends React.Component {
     this.setState({ shareVisible: false });
   }
 
+  showAddModal() {
+    this.setState({ addPlaceVisible: true });
+  }
+
   hideAddModal() {
     window.history.pushState({}, "", "/");
     this.setState({ addPlaceVisible: false });
@@ -162,7 +166,7 @@ class App extends React.Component {
                       </Popover>
                       <Button
                         onClick={event => {
-                          window.location.href = "/addplace";
+                          this.showAddModal();
                         }}
                         shape="round"
                         className="header-button header-add-place-button"
@@ -183,8 +187,8 @@ class App extends React.Component {
                     level={1}
                     style={{ color: "white", textAlign: "center" }}
                   >
-                    Your favorite South African restaurant might close forever.
-                    Help save it.
+                    Your favorite South African small business might close
+                    forever. Help save it.
                   </Title>
                   <div className="header-sans">
                     Vouchers help "flatten the curve" of lost income from
@@ -249,7 +253,7 @@ class App extends React.Component {
                   >
                     <Title level={3}>3 weeks can kill a business</Title>
                     <p>
-                      Restaurants have many fixed costs: rent, labour, loan
+                      Businesses have many fixed costs: rent, labour, loan
                       repayments, insurance, supplies, repairs - and the list
                       goes on. Even successful small businesses have very thin
                       margins of 3-5%. The lockdown is keeping customers at
