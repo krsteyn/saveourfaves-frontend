@@ -29,6 +29,10 @@ function AreaDropdown(props) {
 export class NeighborhoodCards extends React.Component {
   constructor(props) {
     super(props);
+    this.setState({
+      neighborhoods: []
+    });
+    this.neighborhoodList = [];
   }
 
   neighborhoodsForArea = async area => {
