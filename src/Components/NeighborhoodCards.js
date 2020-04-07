@@ -64,9 +64,9 @@ export class NeighborhoodCards extends React.Component {
   componentWillUnmount = () => {
     window.removeEventListener("resize", this.updateWindowDimensions);
   };
-  componentDidUpdate = (prevProps, prevState) => {
+  componentDidUpdate = async (prevProps, prevState) => {
     if (prevProps.currentArea !== this.props.currentArea) {
-      const newNeighborhoods = this.neighborhoodsForArea(
+      const newNeighborhoods = await this.neighborhoodsForArea(
         this.props.currentArea
       );
       this.setState({
@@ -208,7 +208,7 @@ export class NeighborhoodCards extends React.Component {
             />
           </Title>
         </div>
-        {this.state.neighborhoods && (
+        {!this.state.loading && (
           <section
             className="neighborhood-card-container"
             style={{
