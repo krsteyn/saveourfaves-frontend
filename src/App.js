@@ -33,7 +33,7 @@ class App extends React.Component {
     super(props);
     // TODO this is janktown routing
     const path = window.location.pathname.slice(1).toLowerCase();
-    const currentArea = Areas[path] ? path : "JHB";
+    const currentArea = Areas[path] ? path : "CPT";
 
     this.state = {
       faqVisible: false,
