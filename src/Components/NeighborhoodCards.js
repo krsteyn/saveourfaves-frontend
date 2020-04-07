@@ -39,6 +39,7 @@ export class NeighborhoodCards extends React.Component {
       neighborhoods: [],
       showingNeighborhoodsFor: props.currentArea
     };
+    this.ref = React.createRef();
   }
 
   neighborhoodsForArea = async area => {
