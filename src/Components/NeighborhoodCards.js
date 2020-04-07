@@ -29,10 +29,6 @@ function AreaDropdown(props) {
 export class NeighborhoodCards extends React.Component {
   constructor(props) {
     super(props);
-    this.setState({
-      neighborhoods: []
-    });
-    this.neighborhoodList = [];
   }
 
   neighborhoodsForArea = async area => {
@@ -64,9 +60,9 @@ export class NeighborhoodCards extends React.Component {
   componentWillUnmount = () => {
     window.removeEventListener("resize", this.updateWindowDimensions);
   };
-  componentDidUpdate = async (prevProps, prevState) => {
+  componentDidUpdate = (prevProps, prevState) => {
     if (prevProps.currentArea !== this.props.currentArea) {
-      const newNeighborhoods = await this.neighborhoodsForArea(
+      const newNeighborhoods = this.neighborhoodsForArea(
         this.props.currentArea
       );
       this.setState({
