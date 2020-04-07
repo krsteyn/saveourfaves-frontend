@@ -97,27 +97,6 @@ export class NeighborhoodCards extends React.Component {
     this.setState({ windowWidth: window.innerWidth });
   };
 
-  // request = async props => {
-  //   await this.fetchNeighborhoodList(this);
-  //   console.log("IA 123...");
-  //
-  //   const neighborhoods = this.neighborhoodsForArea(props.currentArea);
-  //
-  //   console.log("IA ...", neighborhoods);
-  //
-  //   this.state = {
-  //     suggestedPlaces: null,
-  //     selectedNeighborhood: neighborhoods[0],
-  //     offset: 0,
-  //     fetchOffset: 0,
-  //     windowWidth: 0,
-  //     loading: true,
-  //     neighborhoods: neighborhoods,
-  //     showingNeighborhoodsFor: props.currentArea
-  //   };
-  //   this.ref = React.createRef();
-  // };
-
   fetchSuggestionsForNeighborhood(neighborhood, ref, fetchOffset) {
     this.setState({ loading: true });
     axios

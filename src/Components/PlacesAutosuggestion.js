@@ -3,9 +3,11 @@ import SFPlaces from "../CityData/Places";
 import Autosuggest from "react-autosuggest";
 import { LogEngagementEvent } from "../Logging";
 import { AddNewPlaceModal } from "./AddNewPlaceModal";
+import axios from "axios";
 
 export class PlaceAutosuggestion extends React.Component {
   maxSuggestions = 8;
+  places = [];
   constructor(props) {
     super(props);
     this.state = {
@@ -21,15 +23,22 @@ export class PlaceAutosuggestion extends React.Component {
       .toLowerCase()
       .replace("é", "e");
   };
+
+  componentDidMount = async () => {
+    this.places = await this.fetchPlacesList();
+  };
+
   getSuggestions = value => {
     const inputValue = this.sanitizeInput(value);
     const inputLength = inputValue.length;
     if (inputLength < 3) {
       return [];
     } else {
-      const results = SFPlaces.filter(
-        place => this.sanitizeInput(place.name).indexOf(inputValue) !== -1
-      ).slice(0, this.maxSuggestions);
+      const results = this.places
+        .filter(
+          place => this.sanitizeInput(place.name).indexOf(inputValue) !== -1
+        )
+        .slice(0, this.maxSuggestions);
       if (results.length === 0) {
         LogEngagementEvent("user-roadblock", "no-results");
       }
@@ -37,6 +46,18 @@ export class PlaceAutosuggestion extends React.Component {
       return results;
     }
   };
+  fetchPlacesList(ref) {
+    return axios
+      .get("api/places/list", {
+        params: {}
+      })
+      .then(response => {
+        return response.data;
+      })
+      .catch(error => {
+        return [];
+      });
+  }
   getSuggestionValue = suggestion => suggestion.name || "";
   renderSuggestion = suggestion => {
     if (suggestion.special) {
@@ -70,9 +91,9 @@ export class PlaceAutosuggestion extends React.Component {
     });
     this.props.onSearchChanged(newValue);
   };
-  onSuggestionsFetchRequested = ({ value }) => {
+  onSuggestionsFetchRequested = async ({ value }) => {
     this.setState({
-      suggestions: this.getSuggestions(value)
+      suggestions: await this.getSuggestions(value)
     });
   };
   onSuggestionsClearRequested = () => {
