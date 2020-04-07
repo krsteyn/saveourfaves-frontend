@@ -104,7 +104,7 @@ export class PlaceAutosuggestion extends React.Component {
   renderInputComponent = inputProps => (
     <div className="react-autosuggest__wrapper">
       <div className="react-autosuggest__left-icon">
-        <img src="/icon.png" />
+        <img src="/search-icon.png" />
       </div>
       <input {...inputProps} />
     </div>

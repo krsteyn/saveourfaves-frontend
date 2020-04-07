@@ -190,10 +190,6 @@ class App extends React.Component {
                     Your favorite South African small business might close
                     forever. Help save it.
                   </Title>
-                  <div className="header-sans">
-                    Vouchers help "flatten the curve" of lost income from
-                    COVID-19.
-                  </div>
                 </Col>
                 <Col
                   sm={{ span: 20, offset: 2 }}
