@@ -15,6 +15,7 @@ export function AddNewPlaceModal(props) {
   const [donationLink, setDonationLink] = useState("");
   const [showDonationInput, setShowDonationInput] = useState("");
   const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [error, setError] = useState(null);
   const [placeDetails, setPlaceDetails] = useState(null);
   var googleURL =
@@ -29,6 +30,7 @@ export function AddNewPlaceModal(props) {
   function resetAndClose() {
     setGiftLink("");
     setEmail("");
+    setPhoneNumber("");
     setHasSubmitted(false);
     setCounter(0);
     props.onClose();
@@ -50,6 +52,7 @@ export function AddNewPlaceModal(props) {
       .post("/api/places/submit_new_place", {
         place_details: placeDetails,
         email: email,
+        phone_number: phoneNumber,
         gift_card_url: giftLink,
         donation_url: donationLink
       })
@@ -127,6 +130,15 @@ export function AddNewPlaceModal(props) {
             type="text"
             placeholder="Contact Email (optional)"
             value={email}
+          />
+          <input
+            className="add-link-modal-input"
+            onChange={event => {
+              setPhoneNumber(event.target.value);
+            }}
+            type="text"
+            placeholder="Contact Number (optional)"
+            value={phoneNumber}
           />
           <div style={{ marginTop: 8 }}>
             <a
