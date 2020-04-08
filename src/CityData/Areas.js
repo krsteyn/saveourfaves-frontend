@@ -2,10 +2,10 @@ const Areas = {
   WC: "Western Cape",
   NC: "Northen Cape",
   NW: "North West",
-  MPU: "Mpumalanga",
+  MP: "Mpumalanga",
   LIM: "Limpopo",
   KZN: "KwaZulu-Natal",
-  GAU: "Gauteng",
+  GT: "Gauteng",
   FS: "Free State",
   EC: "Eastern Cape"
 };
