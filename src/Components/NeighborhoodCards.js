@@ -63,9 +63,9 @@ export class NeighborhoodCards extends React.Component {
     //    const neighborhoods = Neighborhoods[area] || [];
     const neighborhoods = this.neighborhoodList[area] || [];
 
-    if (neighborhoods && neighborhoods.length > 0) {
-      shuffleArray(neighborhoods);
-    }
+    // if (neighborhoods && neighborhoods.length > 0) {
+    //   shuffleArray(neighborhoods);
+    // }
     return neighborhoods;
   };
 
