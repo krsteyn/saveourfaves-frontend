@@ -130,7 +130,13 @@ class App extends React.Component {
               }}
             />
             <Row className="hero-row">
-              <Row className="centre-box">
+              <div
+                style={{
+                  maxWidth: "1100px",
+                  margin: "0px auto",
+                  minWidth: "0"
+                }}
+              >
                 <Row className="top-header" justify="center">
                   <Col span={24} offset={0}>
                     <Title style={{ float: "left", color: "white" }} level={4}>
@@ -251,96 +257,72 @@ class App extends React.Component {
                     </p>
                   </Col>
                 </Row>
-              </Row>
-              <Row className="footer-menu">
-                <Col
-                  offset={5}
-                  span={9}
-                  sm={{ span: 18 }}
-                  xs={{ span: 18 }}
-                  style={{ textAlign: "left" }}
-                >
-                  <img className="footer-logo" src="/footer-logo.png" />
-                </Col>
-                <Col
-                  offset={0}
-                  span={9}
-                  sm={{ span: 18 }}
-                  xs={{ span: 18 }}
-                  style={{ textAlign: "left" }}
-                >
-                  <div>
-                    <Title level={3} style={{ color: "white" }}>
-                      Quick Menu
-                    </Title>
-                    <ul className="menu-list">
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          target="_target"
-                          href="/SaveYourLocal_PrivacyPolicy.pdf"
-                        >
-                          Privacy Policy
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          target="_target"
-                          href="/Terms_and_Conditions_of_Use.pdf"
-                        >
-                          Terms and Conditions
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          target="_self"
-                          href={Constants.AddPlaceURL}
-                        >
-                          Register your local
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          onClick={() => {
-                            this.showFAQModal();
-                          }}
-                        >
-                          FAQ
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </Col>
-              </Row>
-              <Row className="footer-row">
-                <Col
-                  offset={5}
-                  span={9}
-                  sm={{ span: 18 }}
-                  xs={{ span: 18 }}
-                  style={{ textAlign: "left" }}
-                >
-                  <div>
-                    <br />
-                  </div>
-                </Col>
-                <Col
-                  offset={0}
-                  span={9}
-                  sm={{ span: 18 }}
-                  xs={{ span: 18 }}
-                  style={{ textAlign: "left" }}
-                >
-                  <div>
-                    <p>Copyright saveyourlocal 2020</p>
-                  </div>
-                </Col>
-              </Row>
+              </div>
             </Row>
-            {/*<Row className="body-row"></Row>*/}
+            <Row className="body-row"></Row>
+            <Row className="footer-menu">
+              <Col offset={5} span={9} style={{ textAlign: "left" }}>
+                <img className="footer-logo" src="/footer-logo.png" />
+              </Col>
+              <Col offset={0} span={9} style={{ textAlign: "left" }}>
+                <div>
+                  <Title level={3} style={{ color: "white" }}>
+                    Quick Menu
+                  </Title>
+                  <ul className="menu-list">
+                    <li>
+                      <a
+                        style={{ color: "white" }}
+                        target="_target"
+                        href="/SaveYourLocal_PrivacyPolicy.pdf"
+                      >
+                        Privacy Policy
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        style={{ color: "white" }}
+                        target="_target"
+                        href="/Terms_and_Conditions_of_Use.pdf"
+                      >
+                        Terms and Conditions
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        style={{ color: "white" }}
+                        target="_self"
+                        href={Constants.AddPlaceURL}
+                      >
+                        Register your local
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        style={{ color: "white" }}
+                        onClick={() => {
+                          this.showFAQModal();
+                        }}
+                      >
+                        FAQ
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </Col>
+            </Row>
+            <Row className="footer-row">
+              <Col offset={5} span={9} style={{ textAlign: "left" }}>
+                <div>
+                  <br />
+                </div>
+              </Col>
+              <Col offset={0} span={9} style={{ textAlign: "left" }}>
+                <div>
+                  <p>Copyright saveyourlocal 2020</p>
+                </div>
+              </Col>
+            </Row>
           </div>
         </div>
         <GoogleAnalyticsTag analyticsID={Config.GoogleAnalyticsID} />
