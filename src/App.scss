@@ -105,9 +105,15 @@ h4 {
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 380px) {
   .body-row {
     min-height: 1850px;
+  }
+}
+
+@media (max-width: 321px) {
+  .body-row {
+    min-height: 2000px;
   }
 }
 
