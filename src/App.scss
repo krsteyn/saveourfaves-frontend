@@ -82,6 +82,13 @@ h4 {
   padding-top: 20px;
   overscroll-behavior: none;
 }
+
+.centre-box {
+  max-width: 1100px;
+  margin: 0 auto;
+  min-width: 0;
+}
+
 .body-row {
   min-height: 1050px;
 }
