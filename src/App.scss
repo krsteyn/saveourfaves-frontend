@@ -188,6 +188,12 @@ h4 {
   max-width: 65%;
 }
 
+@media (max-width: 516px) {
+  .header-logo {
+    max-width: 45%;
+  }
+}
+
 .header-button:hover,
 .header-button:active {
   color: $primary-color;
