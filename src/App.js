@@ -133,11 +133,11 @@ class App extends React.Component {
               {/*<Row className="centre-box">*/}
               <Row centre="xs" centre="md" centre="sm" centre="lg" centre="xl">
                 <Col
-                  xs={{ span: 24, offset: 0 }}
-                  sm={{ span: 24, offset: 0 }}
-                  md={{ span: 18, offset: 3 }}
-                  lg={{ span: 14, offset: 3 }}
-                  xl={{ span: 14, offset: 3 }}
+                  xs={{ span: 24 }}
+                  sm={{ span: 24 }}
+                  md={{ span: 18 }}
+                  lg={{ span: 14 }}
+                  xl={{ span: 14 }}
                 >
                   <Row className="top-header" justify="center">
                     <Col span={24} offset={0}>
@@ -271,13 +271,18 @@ class App extends React.Component {
               </Row>
               <Row className="footer-menu">
                 <Col
-                  offset={5}
-                  span={9}
-                  sm={{ span: 18 }}
-                  xs={{ span: 18 }}
+                  xs={{ span: 23, offset: 1 }}
+                  sm={{ span: 23, offset: 1 }}
+                  md={{ span: 9, offset: 3 }}
+                  lg={{ span: 7, offset: 5 }}
+                  xl={{ span: 7, offset: 5 }}
                   style={{ textAlign: "left" }}
                 >
-                  <img className="footer-logo" src="/footer-logo.png" />
+                  <Row end="xs">
+                    <Col xs={24}>
+                      <img className="footer-logo" src="/footer-logo.png" />
+                    </Col>
+                  </Row>
                 </Col>
                 <Col
                   offset={0}
