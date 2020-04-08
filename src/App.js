@@ -273,8 +273,8 @@ class App extends React.Component {
                     <li>
                       <a
                         style={{ color: "white" }}
-                        target="_target"
-                        href="/SaveYourLocal_PrivacyPolicy.pdf"
+                        target="_blank"
+                        href="/syl_privacy_policy.pdf"
                       >
                         Privacy Policy
                       </a>
@@ -282,8 +282,8 @@ class App extends React.Component {
                     <li>
                       <a
                         style={{ color: "white" }}
-                        target="_target"
-                        href="/Terms_and_Conditions_of_Use.pdf"
+                        target="_blank"
+                        href="/syl_website_terms_and_conditions_of_use.pdf"
                       >
                         Terms and Conditions
                       </a>
