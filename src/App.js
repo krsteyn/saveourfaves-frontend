@@ -131,13 +131,13 @@ class App extends React.Component {
             />
             <Row className="hero-row">
               {/*<Row className="centre-box">*/}
-              <Row centre="xs" centre="md" centre="sm" centre="lg" centre="xl">
+              <Row>
                 <Col
+                  offset={5}
+                  span={14}
                   xs={{ span: 24, offset: 0 }}
                   sm={{ span: 24, offset: 0 }}
                   md={{ span: 18, offset: 3 }}
-                  lg={{ span: 14, offset: 3 }}
-                  xl={{ span: 14, offset: 3 }}
                 >
                   <Row className="top-header" justify="center">
                     <Col span={24} offset={0}>
