@@ -19,9 +19,15 @@ function AreaDropdown(props) {
         props.updateArea(newArea);
       }}
     >
-      <option value="CPT">Cape Town</option>
-      <option value="JHB">Johannesburg</option>
-      <option value="DBN">Durban</option>
+      <option value="GAU">Gauteng</option>
+      <option value="NC">Northen Cape</option>
+      <option value="WC">Western Cape</option>
+      <option value="NW">North West</option>
+      <option value="MPU">Mpumalanga</option>
+      <option value="LIM">Limpopo</option>
+      <option value="KZN">KwaZulu-Natal</option>
+      <option value="FS">Free State</option>
+      <option value="EC">Eastern Cape</option>
     </select>
   );
 }
