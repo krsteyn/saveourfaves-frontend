@@ -69,8 +69,6 @@ function FAQModal(props) {
         "<li>a bank letter containing your banking details and </li>" +
         "<li>a description of the coupons or vouchers which you will be offering to customers</li>" +
         "<li>Copies of the IDs of the directors and shareholders / owners of the business</li>" +
-        "<li>[do we want to limit size of business which can register - payroll / number of employees?]</li>" +
-        "<li>Need to be formally registered in SA and tax compliant? </li>" +
         "</ul>"
     }
   ];
@@ -94,12 +92,6 @@ function FAQModal(props) {
     },
     {
       title:
-        "How else can I support our local businesses beyond purchasing a voucher?",
-      body:
-        "Do we want to list other options here? Other crowdfunding platforms, solidarity fund etc?"
-    },
-    {
-      title:
         "Is this just for Jo’burg, Cape Town and Durbs? Can you do this for my town or suburb?",
       body:
         "SYL is open to any registered South African business regardless of location in South Africa. If a business registers successfully with us, they can be reflected on our platform."
@@ -116,13 +108,6 @@ function FAQModal(props) {
       title: "Why do you want so much paperwork from me?",
       body:
         "We want to minimise any risk that there may be in inadvertently listing a fraudulent voucher or business. By making sure that we only have vetted, operational businesses on the platform, we are protecting everyone’s brand and reputation including your own."
-    },
-    {
-      title: "Other concerns:",
-      body:
-        "<ul>" +
-        "<li>Do we want to put any restrictions on services? Also can we reserve the right to remove any business we feel is offering sex, drugs, crack, or to kidnap your children so you can work in peace etc.?</li>" +
-        "</ul>"
     }
   ];
   return (
@@ -135,25 +120,16 @@ function FAQModal(props) {
       footer={<span></span>}
     >
       <h2>SAVE YOUR LOCAL</h2>
-
       <p>
-        {" "}
-        Hyperli provides a curated online marketplace which connects local
-        businesses to local customers. Hyperli is <br />
-        able to issue a voucher which contains a unique code
-        (numerical/alphabetical code or QR code) which can be used for
-        redemption.
-        <br />
-        <br />
-        [enter something about payment gateway and payment process???]
+        Here are some frequently asked questions and their answers. If anything
+        is not clear please reach out to us on hello@saveyourlocal.co.za
       </p>
       <br />
+      <h2>FAQ Answers</h2>
+
       {consumerFAQs.map(faq => (
         <FAQEntry key={faq.title} title={faq.title} body={faq.body} />
       ))}
-
-      <br />
-      <h2>FAQ Answers</h2>
 
       {ansFAQs.map(faq => (
         <FAQEntry key={faq.title} title={faq.title} body={faq.body} />
