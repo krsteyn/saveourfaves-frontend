@@ -83,7 +83,18 @@ h4 {
   overscroll-behavior: none;
 }
 .body-row {
-  height: 950px;
+  min-height: 950px;
+}
+@media (max-width: 320px) {
+  .body-row {
+    min-height: 1250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .body-row {
+    min-height: 1050px;
+  }
 }
 
 .footer-row {
