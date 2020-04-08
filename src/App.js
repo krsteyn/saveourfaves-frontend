@@ -273,9 +273,8 @@ class App extends React.Component {
                     <li>
                       <a
                         style={{ color: "white" }}
-                        onClick={() => {
-                          this.showPrivacyModal();
-                        }}
+                        target="_target"
+                        href="/SaveYourLocal_PrivacyPolicy.pdf"
                       >
                         Privacy Policy
                       </a>
@@ -283,9 +282,8 @@ class App extends React.Component {
                     <li>
                       <a
                         style={{ color: "white" }}
-                        onClick={() => {
-                          this.showTermsModal();
-                        }}
+                        target="_target"
+                        href="/Terms_and_Conditions_of_Use.pdf"
                       >
                         Terms and Conditions
                       </a>
