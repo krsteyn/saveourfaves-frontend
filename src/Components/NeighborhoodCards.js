@@ -22,6 +22,12 @@ function AreaDropdown(props) {
       <option value="CPT">Cape Town</option>
       <option value="JHB">Johannesburg</option>
       <option value="DBN">Durban</option>
+      <option value="BHI">Bhisho</option>
+      <option value="BLM">Bloemfontein</option>
+      <option value="PIT">Pietermaritzburg</option>
+      <option value="POL">Polokwane</option>
+      <option value="MAH">Mahikeng</option>
+      <option value="KIM">Kimberley</option>
     </select>
   );
 }
