@@ -43,7 +43,7 @@ function FAQModal(props) {
 
   const consumerFAQs = [
     {
-      title: "What is SaveOurFaves?",
+      title: "What we do:",
       body:
         "SaveOurFaves is a directory of Bay Area restaurants and coffee shops that offer online gift cards for purchase. It’s our hope that by providing this resource, we’ll be able to mobilize loyal customers to provide much-needed support for their favorite places in town. We also link to staff donation sites, if they are available."
     },
@@ -58,7 +58,11 @@ function FAQModal(props) {
       title:
         "How else can I support our local businesses beyond purchasing a gift card?",
       body:
-        "Delivery and pickup are great options! Some restaurants that don’t normally offer delivery have started to offer curbside pickup, and others have closed temporarily. Check their website or social media for the latest info, or browse the " + renderLink("https://projects.sfchronicle.com/2020/restaurant-delivery/", "San Francisco Chronicle's list") +
+        "Delivery and pickup are great options! Some restaurants that don’t normally offer delivery have started to offer curbside pickup, and others have closed temporarily. Check their website or social media for the latest info, or browse the " +
+        renderLink(
+          "https://projects.sfchronicle.com/2020/restaurant-delivery/",
+          "San Francisco Chronicle's list"
+        ) +
         " of Bay Area restaurants offering takeout. <br />" +
         "Tip generously if you can (even for delivery/pickup), since employees are doing extra work and putting their health at risk. <br />" +
         "Encourage the government to get involved. Sign this " +
@@ -132,7 +136,19 @@ function FAQModal(props) {
       onCancel={props.onClose}
       footer={<span></span>}
     >
-      <h2>For Restaurant-goers</h2>
+      <h2>SAVE YOUR LOCAL</h2>
+
+      <p>
+        {" "}
+        Hyperli provides a curated online marketplace which connects local
+        businesses to local customers. Hyperli is <br />
+        able to issue a voucher which contains a unique code
+        (numerical/alphabetical code or QR code) which can be used for
+        redemption.
+        <br />
+        [enter something about payment gateway and payment process???]
+      </p>
+
       {consumerFAQs.map(faq => (
         <FAQEntry key={faq.title} title={faq.title} body={faq.body} />
       ))}
