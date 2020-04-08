@@ -17,12 +17,12 @@ class FAQEntry extends React.Component {
   render() {
     return (
       <>
-        <h3
+        <h4
           style={{ cursor: "pointer" }}
           onClick={event => this.setState({ expanded: !this.state.expanded })}
         >
           {this.props.title}
-        </h3>
+        </h4>
         {this.state.expanded && (
           <p dangerouslySetInnerHTML={this.getBody()}></p>
         )}
@@ -45,86 +45,84 @@ function FAQModal(props) {
     {
       title: "What we do:",
       body:
-        "SaveOurFaves is a directory of Bay Area restaurants and coffee shops that offer online gift cards for purchase. It’s our hope that by providing this resource, we’ll be able to mobilize loyal customers to provide much-needed support for their favorite places in town. We also link to staff donation sites, if they are available."
+        "<ul>" +
+        "<li>K2020183515 (South Africa) NPC (trading as Save Your Local) (“Save Your Local”, “we” or “us”) is a non-profit company, registered and conducting its business in the Republic South Africa, under registration number 2020/183515/08.</li>" +
+        "<li>We provide an online platform which allows small businesses (for example, merchants in the hospitality industry, such as restaurants and hotels or any other service based business) to sell vouchers in exchange for products or services to their customers during the Covid-19 pandemic.</li>" +
+        "<li>The coupons are sold by the merchants at a discounted price and will be redeemable by customers with the merchants directly, once the merchants are fully operational again.</li>" +
+        "<li>The contract of sale for the coupon/vouchure will be entered into between the merchant and the customer, with Save Your Local merely facilitating the transaction. </li>" +
+        "<li>This transaction between the merchant and customer, will be conducted through the Hyperli platform, and merchants need to comply with their Terms and conditions?</li>" +
+        "<li>The customer will pay the merchant directly and upon receipt of proof of payment, Save Your Local will issue the customer with a redeemable voucher/coupon on behalf of the merchant.</li>" +
+        "<li>This initiative has been designed to assist merchants in combatting the negative financial and economic implications of the Covid-19 pandemic and continuing to generate revenue, despite the fact that they cannot currently service their customers.</li>" +
+        "<li>The merchant remains responsible for ensuring that its business is compliant with all laws, including compliance in relation to the goods and services provided against redemption of the voucher, and the validity of the voucher itself.</li>" +
+        "<li>Save Your Local does not guarantee any customers will buy vouchers or coupons for your products or services.</li>" +
+        "<li>Save Your Local is a platform designed to allow you the merchant to market and sell vouchers to your existing customers using various channels that you own e.g. newsletters, social media, SMS etc.</li>" +
+        "</ul>"
     },
     {
-      title: "Why isn’t my favorite business on your site?",
+      title: "Are you a merchant?",
       body:
-        "Please help us add your fave Bay Area food & beverages spots " +
-        addPlaceLink("here") +
-        ". We're open to adding more small business categories if this catches on."
+        "<h4>Please send us: </h4>" +
+        "<ul>" +
+        "<li>The name of your business</li>" +
+        "<li>The location at which you trade</li>" +
+        "<li>Your business contact details (we require an invoice from a supplier / landlord reflecting your trading name, and confirming the physical address at which you trade)</li>" +
+        "<li>a bank letter containing your banking details and </li>" +
+        "<li>a description of the coupons or vouchers which you will be offering to customers</li>" +
+        "<li>Copies of the IDs of the directors and shareholders / owners of the business</li>" +
+        "<li>[do we want to limit size of business which can register - payroll / number of employees?]</li>" +
+        "<li>Need to be formally registered in SA and tax compliant? </li>" +
+        "</ul>"
+    }
+  ];
+
+  const ansFAQs = [
+    {
+      title: "What is Save Your Local?",
+      body:
+        "Save your Local is a collaboration between various entrepreneurs in South Africa. We wanted to be able to use our skills and experience to assist small and medium sized businessesd in South African during the Covid-19 pandemic." +
+        "Save your Local is a non-profit company which has secured, on a pro bono basis, the services of a number of businesses and partner organisation (see here) which have worked together to create a marketplace where small businesses can advertise their goods and services and sell vouchers which can later be redeemed at their establishments."
+    },
+    {
+      title: "What kinds of businesses can participate? ",
+      body:
+        "Any small business, formally registered in South Africa and tax compliant, can apply for registration and participation on this platform. "
+    },
+    {
+      title: "Why isn’t my favourite business on your site?",
+      body:
+        "If you want to support a business that isn’t reflected, please let them, and us, know. If they register, we can load them onto our system (we do have a validation process that they must work through), and you can support them."
     },
     {
       title:
-        "How else can I support our local businesses beyond purchasing a gift card?",
+        "How else can I support our local businesses beyond purchasing a voucher?",
       body:
-        "Delivery and pickup are great options! Some restaurants that don’t normally offer delivery have started to offer curbside pickup, and others have closed temporarily. Check their website or social media for the latest info, or browse the " +
-        renderLink(
-          "https://projects.sfchronicle.com/2020/restaurant-delivery/",
-          "San Francisco Chronicle's list"
-        ) +
-        " of Bay Area restaurants offering takeout. <br />" +
-        "Tip generously if you can (even for delivery/pickup), since employees are doing extra work and putting their health at risk. <br />" +
-        "Encourage the government to get involved. Sign this " +
-        renderLink("http://chng.it/jM97Sbf9ct", "San Francisco petition") +
-        " to encourage lawmakers to offer emergency small business loans. Please call your US Representative and your Senators. You can be connected to the capitol switchboard at 202-224-3121. Demand that small businesses are part the federal stimulus plan."
+        "Do we want to list other options here? Other crowdfunding platforms, solidarity fund etc?"
     },
     {
-      title: "Why is this just for the Bay Area? Can you do this for my city?",
+      title:
+        "Is this just for Jo’burg, Cape Town and Durbs? Can you do this for my town or suburb?",
       body:
-        "As San Francisco natives, we started this project for our community. Over the past days, people have launched similar tools for their specific cities, or even nationally. Check out " +
-        renderLink("https://helpmainstreet.com/", "Help Main Street") +
-        ", " +
-        renderLink("https://givelocal.co/", "GiveLocal") +
-        ", and " +
-        renderLink(
-          "https://rallyforrestaurants.com/",
-          "Rally for Restaurants"
-        ) +
-        "."
+        "SYL is open to any registered South African business regardless of location in South Africa. If a business registers successfully with us, they can be reflected on our platform."
     },
     {
       title: "Who built this? And why?",
       body:
-        "We’re Kaitlyn & Mike Krieger -- a husband and wife duo in San Francisco. We’re no longer going out because of COVID-19 (San Francisco is under a “shelter in place” ordinance), so we started buying gift cards to help support our favorite cafes and restaurants during this unpredictable time. SaveOurFaves is our simple way to make it easier for people to help local businesses through this difficult time. We got help and advice from some great friends and local business owners, in particular Phil Levin, Zack Schwab, Kristen Berman, Stefanie Krieger, Melissa Dyrdahl, Laura Buhler, Paul Einbund, and Eddie Hernandez. You can contact us with any questions about the site at " +
-        renderLink("mailto:info@saveourfaves.org", "info@saveourfaves.org") +
-        " and see more about why we decided to start it " +
-        renderLink(
-          "https://medium.com/@mikekrieger/launching-saveourfaves-lets-support-restaurants-with-gift-cards-c4fb3e1828cf",
-          "here"
-        ) +
-        "."
+        "The businesses and people reflected here have all been involved to ensure that Save Your Local was able to launch and assist businesses as fast as possible, because we know the importance of small businesses to the economy, jobs and the country. We have all been involved with or built small businesses of our own, and we are aware of the stresses placed on business owners at this time."
     }
   ];
+
   const bizFAQs = [
     {
-      title: "Why isn’t my business showing up in your search results?",
+      title: "Why do you want so much paperwork from me?",
       body:
-        "Please help us add your Bay Area food/beverage business " +
-        addPlaceLink("here") +
-        ". We're open to adding more small business categories if this catches on."
+        "We want to minimise any risk that there may be in inadvertently listing a fraudulent voucher or business. By making sure that we only have vetted, operational businesses on the platform, we are protecting everyone’s brand and reputation including your own."
     },
     {
-      title:
-        "My business offers gift certificates, but your site says we don’t",
-      body: "Please let us know the details " + addPlaceLink("here") + "."
-    },
-    {
-      title:
-        "I'm running a GoFundMe for my staff, and I'd like to list it on your site",
+      title: "Other concerns:",
       body:
-        "Please drop us a note via email at " +
-        renderLink("mailto:info@saveourfaves.org", "info@saveourfaves.org")
-    },
-    {
-      title: "How can I start offering online gift cards?",
-      body:
-        "The first step is to check with your POS provider. Many offer their own gift card features (e.g. Square, Toast, ShopKeep), and others integrate with specific third-party providers. If your POS provider doesn’t offer gift cards or integrate with third-party providers, there are some reasonable standalone eGift Card apps like GiftUp or GiftFly. If you’re considering other options, make sure that your business receives the fee for the gift card as soon as the customer purchases the card (otherwise that won’t help you during the crisis). Some services may also ask customers to pay an additional fee when they buy a gift card but be sure it’s a small amount."
-    },
-    {
-      title: "How can I encourage customers to buy gift cards?",
-      body:
-        "People are looking for ways they can support their favorite businesses, so don’t be afraid to let them know that gift cards will help. Reach out to your community on Facebook, Twitter, and Instagram, and use your email list to get in touch with your customers. Ask them to consider buying a gift card for one month of spending to help you weather this storm and keep paying staff, so that you can continue offering great food/coffee/etc. for years to come."
+        "<ul>" +
+        "<li>Do we want to put any restrictions on services? Also can we reserve the right to remove any business we feel is offering sex, drugs, crack, or to kidnap your children so you can work in peace etc.?</li>" +
+        "</ul>"
     }
   ];
   return (
@@ -146,13 +144,24 @@ function FAQModal(props) {
         (numerical/alphabetical code or QR code) which can be used for
         redemption.
         <br />
+        <br />
         [enter something about payment gateway and payment process???]
       </p>
-
+      <br />
       {consumerFAQs.map(faq => (
         <FAQEntry key={faq.title} title={faq.title} body={faq.body} />
       ))}
+
+      <br />
+      <h2>FAQ Answers</h2>
+
+      {ansFAQs.map(faq => (
+        <FAQEntry key={faq.title} title={faq.title} body={faq.body} />
+      ))}
+
+      <br />
       <h2>For Businesses</h2>
+
       {bizFAQs.map(faq => (
         <FAQEntry key={faq.title} title={faq.title} body={faq.body} />
       ))}
