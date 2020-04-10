@@ -6,7 +6,7 @@ export class ShareOptions extends React.Component {
   render() {
     return (
       <div>
-        <FacebookProvider appId="202370887681802">
+        <FacebookProvider appId="100234758323003">
           <Share href="https://saveyourlocal.co.za">
             {({ handleClick, loading }) => (
               <Button
