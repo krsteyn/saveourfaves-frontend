@@ -57,20 +57,20 @@ function FAQModal(props) {
         "<li>Save Your Local does not guarantee any customers will buy vouchers or coupons for your products or services.</li>" +
         "<li>Save Your Local is a platform designed to allow you the merchant to market and sell vouchers to your existing customers using various channels that you own e.g. newsletters, social media, SMS etc.</li>" +
         "</ul>"
-    },
-    {
-      title: "Are you a merchant?",
-      body:
-        "<h4>Please send us: </h4>" +
-        "<ul>" +
-        "<li>The name of your business</li>" +
-        "<li>The location at which you trade</li>" +
-        "<li>Your business contact details (we require an invoice from a supplier / landlord reflecting your trading name, and confirming the physical address at which you trade)</li>" +
-        "<li>a bank letter containing your banking details and </li>" +
-        "<li>a description of the coupons or vouchers which you will be offering to customers</li>" +
-        "<li>Copies of the IDs of the directors and shareholders / owners of the business</li>" +
-        "</ul>"
     }
+    // {
+    //   title: "Are you a merchant?",
+    //   body:
+    //     "<h4>Please send us: </h4>" +
+    //     "<ul>" +
+    //     "<li>The name of your business</li>" +
+    //     "<li>The location at which you trade</li>" +
+    //     "<li>Your business contact details (we require an invoice from a supplier / landlord reflecting your trading name, and confirming the physical address at which you trade)</li>" +
+    //     "<li>a bank letter containing your banking details and </li>" +
+    //     "<li>a description of the coupons or vouchers which you will be offering to customers</li>" +
+    //     "<li>Copies of the IDs of the directors and shareholders / owners of the business</li>" +
+    //     "</ul>"
+    // }
   ];
 
   const ansFAQs = [
@@ -121,26 +121,27 @@ function FAQModal(props) {
     >
       <h2>SAVE YOUR LOCAL</h2>
       <p>
-        Here are some frequently asked questions and their answers. If anything
-        is not clear please reach out to us on hello@saveyourlocal.co.za
+        Save Your Local provides a curated online marketplace which connects
+        local businesses to local customers. Save Your Local’s partners are able
+        to issue a voucher which contains a unique code (numerical/alphabetical
+        code or QR code) which can be used for redemption.
       </p>
       <br />
-      <h2>FAQ Answers</h2>
 
       {consumerFAQs.map(faq => (
         <FAQEntry key={faq.title} title={faq.title} body={faq.body} />
       ))}
 
-      {ansFAQs.map(faq => (
-        <FAQEntry key={faq.title} title={faq.title} body={faq.body} />
-      ))}
+      {/*{ansFAQs.map(faq => (*/}
+      {/*  <FAQEntry key={faq.title} title={faq.title} body={faq.body} />*/}
+      {/*))}*/}
 
-      <br />
-      <h2>For Businesses</h2>
+      {/*<br />*/}
+      {/*<h2>For Businesses</h2>*/}
 
-      {bizFAQs.map(faq => (
-        <FAQEntry key={faq.title} title={faq.title} body={faq.body} />
-      ))}
+      {/*{bizFAQs.map(faq => (*/}
+      {/*  <FAQEntry key={faq.title} title={faq.title} body={faq.body} />*/}
+      {/*))}*/}
     </Modal>
   );
 }

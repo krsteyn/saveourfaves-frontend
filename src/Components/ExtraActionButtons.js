@@ -7,7 +7,7 @@ export function ExtraActionButtons(props) {
     window.open(buttonData.url);
   }
   const place = props.place;
-  const donateText = "donate to staff";
+  const donateText = "donate";
   const takeoutText = "order takeout";
   const classOrder = ["extra-action-button-1", "extra-action-button-2"];
   const takeout = { url: place.takeoutURL, log: "takeout", text: takeoutText };

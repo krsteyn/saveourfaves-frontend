@@ -9,8 +9,7 @@ import Config from "./Config";
 import GoogleAnalyticsTag from "./Components/GoogleAnalyticsTag";
 import FAQModal from "./Components/FAQModal";
 import AddNewPlaceModal from "./Components/AddNewPlaceModal";
-import TermsModal from "./Components/TermsModal";
-import PrivacyModal from "./Components/PrivacyModal";
+import DonateModal from "./Components/DonateModal";
 import LogEngagementEvent from "./Logging";
 import NeighborhoodCards from "./Components/NeighborhoodCards";
 import PlaceFilterDisplay from "./Components/PlaceFilterDisplay";
@@ -43,12 +42,23 @@ class App extends React.Component {
       shareVisible: true,
       currentArea: currentArea,
       addPlaceVisible: path === "addplace",
-      termsVisible: path === "terms",
-      privacyVisible: path === "privacy"
+      donateVisible: false,
+      preferredProviders: ["Hyperli"]
     };
 
     this.selfRef = React.createRef();
   }
+
+  componentDidMount = () => {
+    axios
+      .get("/api/places/preferred_provider/list")
+      .then(response => {
+        this.setState({ preferredProviders: response.data });
+      })
+      .catch(error => {
+        console.error("Could not get preferred voucher providers");
+      });
+  };
 
   showFAQModal() {
     this.setState({ faqVisible: true });
@@ -58,20 +68,12 @@ class App extends React.Component {
     this.setState({ faqVisible: false });
   }
 
-  showTermsModal() {
-    this.setState({ termsVisible: true });
+  showDonateModal() {
+    this.setState({ donateVisible: true });
   }
 
-  hideTermsModal() {
-    this.setState({ termsVisible: false });
-  }
-
-  showPrivacyModal() {
-    this.setState({ privacyVisible: true });
-  }
-
-  hidePrivacyModal() {
-    this.setState({ privacyVisible: false });
+  hideDonateModal() {
+    this.setState({ donateVisible: false });
   }
 
   showShareModal() {
@@ -113,22 +115,26 @@ class App extends React.Component {
             />
             <AddNewPlaceModal
               shouldShow={this.state.addPlaceVisible}
+              preferredProviders={this.state.preferredProviders}
               onClose={() => {
                 this.hideAddModal();
               }}
             />
-            <TermsModal
-              shouldShow={this.state.termsVisible}
+            <DonateModal
+              shouldShow={this.state.donateVisible}
               onClose={() => {
-                this.hideTermsModal();
+                this.hideDonateModal();
               }}
             />
-            <PrivacyModal
-              shouldShow={this.state.privacyVisible}
-              onClose={() => {
-                this.hidePrivacyModal();
-              }}
-            />
+            <Row className="covid-banner">
+              <p>
+                <strong>Stay informed!</strong> Visit the SA Department of
+                Health's website for COVID-19 updates:
+                <a href="https://www.sacoronavirus.co.za" target="_blank">
+                  www.sacoronavirus.co.za
+                </a>
+              </p>
+            </Row>
             <Row className="hero-row">
               <div
                 style={{
@@ -151,7 +157,7 @@ class App extends React.Component {
                           className="header-link"
                           level={4}
                         >
-                          FAQ
+                          About Us
                         </Title>
                       </a>
                       <Popover content={<ShareOptions />}>
@@ -176,7 +182,6 @@ class App extends React.Component {
                     </div>
                   </Col>
                 </Row>
-
                 <Col
                   xs={{ span: 18, offset: 3 }}
                   span={16}
@@ -190,6 +195,22 @@ class App extends React.Component {
                     Your favorite South African small business might close
                     forever. Help save it.
                   </Title>
+                  <div className="action-button-images">
+                    <img
+                      src="./register.png"
+                      onClick={event => {
+                        this.showAddModal();
+                      }}
+                    />
+                  </div>
+                  <div className="action-button-images">
+                    <img
+                      src="./donate.png"
+                      onClick={event => {
+                        this.showDonateModal();
+                      }}
+                    />
+                  </div>
                 </Col>
                 <Col
                   sm={{ span: 20, offset: 2 }}
@@ -286,6 +307,24 @@ class App extends React.Component {
                         href="/syl_website_terms_and_conditions_of_use.pdf"
                       >
                         Terms and Conditions
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        style={{ color: "white" }}
+                        target="_blank"
+                        href="/faq-Answers.pdf"
+                      >
+                        FAQ
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        style={{ color: "white" }}
+                        target="_blank"
+                        href="/who-are-we.pdf"
+                      >
+                        Who are we
                       </a>
                     </li>
                     <li>

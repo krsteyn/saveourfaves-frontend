@@ -16,6 +16,7 @@ export function AddNewPlaceModal(props) {
   const [showDonationInput, setShowDonationInput] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [preferredProvider, setPreferredProvider] = useState("");
   const [error, setError] = useState(null);
   const [placeDetails, setPlaceDetails] = useState(null);
   var googleURL =
@@ -33,6 +34,7 @@ export function AddNewPlaceModal(props) {
     setPhoneNumber("");
     setHasSubmitted(false);
     setCounter(0);
+    setPreferredProvider("");
     props.onClose();
   }
   function closeSoon() {
@@ -54,7 +56,8 @@ export function AddNewPlaceModal(props) {
         email: email,
         phone_number: phoneNumber,
         gift_card_url: giftLink,
-        donation_url: donationLink
+        donation_url: donationLink,
+        preferred_provided: preferredProvider
       })
       .then(response => {
         closeSoon();
@@ -122,6 +125,19 @@ export function AddNewPlaceModal(props) {
             placeholder="Voucher Link (if you know it)"
             value={giftLink}
           />
+          <select
+            className="area-picker"
+            value={preferredProvider}
+            onChange={event => {
+              setPreferredProvider(event.target.value);
+            }}
+          >
+            <option value="hy">Hyperli</option>
+            <option value="sc">Snapscan</option>
+            {props.preferredProviders.map(provider => (
+              <option value={provider.key}>{provider.name}</option>
+            ))}
+          </select>
           <input
             className="add-link-modal-input"
             onChange={event => {
