@@ -78,7 +78,7 @@ export function AddNewPlaceModal(props) {
   }
   return (
     <Modal
-      title={<span>Add a New Small Business</span>}
+      title={<span>Add a New Local Business</span>}
       visible={props.shouldShow}
       onOk={args => {
         counter === 0 ? handleLinkSubmission() : resetAndClose();
@@ -125,18 +125,21 @@ export function AddNewPlaceModal(props) {
             placeholder="Voucher Link (if you know it)"
             value={giftLink}
           />
+          <span className="picker-label">
+            {" "}
+            Select Preferred Voucher Provider
+          </span>
           <select
-            className="area-picker"
+            className="provider-picker"
             value={preferredProvider}
             onChange={event => {
               setPreferredProvider(event.target.value);
             }}
           >
-            <option value="hy">Hyperli</option>
-            <option value="sc">Snapscan</option>
-            {props.preferredProviders.map(provider => (
-              <option value={provider.key}>{provider.name}</option>
-            ))}
+            {props.preferredProviders &&
+              props.preferredProviders.map(provider => (
+                <option value={provider.key}>{provider.name}</option>
+              ))}
           </select>
           <input
             className="add-link-modal-input"

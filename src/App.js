@@ -130,125 +130,171 @@ class App extends React.Component {
               <p>
                 <strong>Stay informed!</strong> Visit the SA Department of
                 Health's website for COVID-19 updates:
-                <a href="https://www.sacoronavirus.co.za" target="_blank">
+                <a
+                  href="https://www.sacoronavirus.co.za"
+                  className="header-link"
+                  target="_blank"
+                >
                   www.sacoronavirus.co.za
                 </a>
               </p>
             </Row>
-            <Row className="hero-row">
-              <div
+            <Row className="hero-row" justify="centre">
+              <Row
                 style={{
                   maxWidth: "1100px",
                   margin: "0px auto",
-                  minWidth: "0"
+                  minWidth: "0",
+                  width: "100%"
                 }}
               >
-                <Row className="top-header" justify="center">
-                  <Col span={24} offset={0}>
-                    <Title style={{ float: "left", color: "white" }} level={4}>
-                      <img src="/landscape-logo.png" className="header-logo" />
-                    </Title>
-                    <div style={{ float: "right" }}>
-                      <a href="#">
-                        <Title
-                          onClick={() => {
-                            this.showFAQModal();
-                          }}
-                          className="header-link"
-                          level={4}
-                        >
-                          About Us
-                        </Title>
-                      </a>
-                      <Popover content={<ShareOptions />}>
-                        <a>
+                <Row className="top-header">
+                  <Col span={12} offset={0}>
+                    <div
+                      style={{
+                        width: "100%"
+                      }}
+                    >
+                      <Title
+                        style={{ float: "left", color: "white" }}
+                        level={4}
+                      >
+                        <img
+                          src="/landscape-logo.png"
+                          className="header-logo"
+                        />
+                      </Title>
+                    </div>
+                  </Col>
+                  <Col span={12} offset={0}>
+                    <div
+                      style={{
+                        width: "100%"
+                      }}
+                    >
+                      <div style={{ float: "right" }}>
+                        <a href="#">
                           <Title
-                            className="header-link header-share-link"
+                            onClick={() => {
+                              this.showFAQModal();
+                            }}
+                            className="header-link"
                             level={4}
                           >
-                            Tell friends
+                            About Us
                           </Title>
                         </a>
-                      </Popover>
-                      <Button
-                        onClick={event => {
-                          this.showAddModal();
-                        }}
-                        shape="round"
-                        className="header-button header-add-place-button"
-                      >
-                        Add a Place
-                      </Button>
+                        <Popover content={<ShareOptions />}>
+                          <a>
+                            <Title
+                              className="header-link header-share-link"
+                              level={4}
+                            >
+                              Tell friends
+                            </Title>
+                          </a>
+                        </Popover>
+                        <Button
+                          onClick={event => {
+                            this.showAddModal();
+                          }}
+                          shape="round"
+                          className="header-button header-add-place-button"
+                        >
+                          Add Local
+                        </Button>
+                      </div>
                     </div>
                   </Col>
                 </Row>
-                <Col
-                  xs={{ span: 18, offset: 3 }}
-                  span={16}
-                  offset={4}
-                  style={{ textAlign: "center", padding: "20px 0px" }}
+                <Row
+                  justify="center"
+                  style={{
+                    width: "100%"
+                  }}
                 >
-                  <Title
-                    level={1}
-                    style={{ color: "white", textAlign: "center" }}
-                  >
-                    Your favorite South African small business might close
-                    forever. Help save it.
-                  </Title>
-                  <div className="action-button-images">
-                    <img
-                      src="./register.png"
-                      onClick={event => {
-                        this.showAddModal();
-                      }}
-                    />
-                  </div>
-                  <div className="action-button-images">
-                    <img
-                      src="./donate.png"
-                      onClick={event => {
-                        this.showDonateModal();
-                      }}
-                    />
-                  </div>
-                </Col>
-                <Col
-                  sm={{ span: 20, offset: 2 }}
-                  md={{ span: 20, offset: 2 }}
-                  lg={{ span: 20, offset: 2 }}
-                >
-                  <div className="main-results">
-                    <div style={{ padding: 20 }}>
-                      <AreaContext.Consumer>
-                        {value => {
-                          return (
-                            <PlaceFilterDisplay updateArea={value.updateArea} />
-                          );
-                        }}
-                      </AreaContext.Consumer>
-                    </div>
-                    <div className="neighborhood-card-container-outer">
-                      <AreaContext.Consumer>
-                        {value => {
-                          return (
-                            <NeighborhoodCards
-                              currentArea={value.currentArea}
-                              updateArea={value.updateArea}
-                            />
-                          );
-                        }}
-                      </AreaContext.Consumer>
-                    </div>
-                  </div>
-                </Col>
-                <Row className="footer-content">
                   <Col
-                    offset={2}
+                    xs={{ span: 20, offset: 0 }}
+                    span={20}
+                    offset={0}
+                    style={{ textAlign: "center", padding: "20px 0px" }}
+                  >
+                    <Title
+                      level={1}
+                      style={{ color: "white", textAlign: "center" }}
+                    >
+                      Your favorite South African small business might close
+                      forever. Help save it.
+                    </Title>
+                    <Row justify="space-around">
+                      <Col className="action-button-wrapper">
+                        <img
+                          src="./register.png"
+                          className="action-button-images"
+                          onClick={event => {
+                            this.showAddModal();
+                          }}
+                        />{" "}
+                        <br />
+                        <span className="action-button-images-text">
+                          Add Your Local
+                        </span>
+                      </Col>
+                      <Col className="action-button-wrapper">
+                        <img
+                          src="./donate.png"
+                          className="action-button-images"
+                          onClick={event => {
+                            this.showDonateModal();
+                          }}
+                        />{" "}
+                        <br />
+                        <span className="action-button-images-text">
+                          Donate
+                        </span>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col
+                    sm={{ span: 20, offset: 0 }}
+                    md={{ span: 20, offset: 0 }}
+                    lg={{ span: 20, offset: 0 }}
+                  >
+                    <div className="main-results">
+                      <div style={{ padding: 20 }}>
+                        <AreaContext.Consumer>
+                          {value => {
+                            return (
+                              <PlaceFilterDisplay
+                                updateArea={value.updateArea}
+                              />
+                            );
+                          }}
+                        </AreaContext.Consumer>
+                      </div>
+                      <div className="neighborhood-card-container-outer">
+                        <AreaContext.Consumer>
+                          {value => {
+                            return (
+                              <NeighborhoodCards
+                                currentArea={value.currentArea}
+                                updateArea={value.updateArea}
+                              />
+                            );
+                          }}
+                        </AreaContext.Consumer>
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
+                <Row className="footer-content" justify="space-around">
+                  <Col
+                    offset={0}
                     xs={18}
                     sm={18}
                     md={9}
-                    lg={9}
-                    xl={9}
+                    lg={{ span: 9, offset: 0 }}
+                    xl={{ span: 8, offset: 0 }}
                     style={{ textAlign: "left" }}
                   >
                     <Title level={3}>Our duty as loyal customers</Title>
@@ -260,12 +306,12 @@ class App extends React.Component {
                     </p>
                   </Col>
                   <Col
-                    offset={2}
+                    offset={0}
                     xs={18}
                     sm={18}
                     md={9}
-                    lg={9}
-                    xl={9}
+                    lg={8}
+                    xl={{ span: 8, offset: 0 }}
                     style={{ textAlign: "left" }}
                   >
                     <Title level={3}>3 weeks can kill a business</Title>
@@ -278,89 +324,102 @@ class App extends React.Component {
                     </p>
                   </Col>
                 </Row>
-              </div>
-            </Row>
-            <Row className="body-row"></Row>
-            <Row className="footer-menu">
-              <Col offset={5} span={9} style={{ textAlign: "left" }}>
-                <img className="footer-logo" src="/footer-logo.png" />
-              </Col>
-              <Col offset={0} span={9} style={{ textAlign: "left" }}>
-                <div>
-                  <Title level={3} style={{ color: "white" }}>
-                    Quick Menu
-                  </Title>
-                  <ul className="menu-list">
-                    <li>
-                      <a
-                        style={{ color: "white" }}
-                        target="_blank"
-                        href="/syl_privacy_policy.pdf"
-                      >
-                        Privacy Policy
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        style={{ color: "white" }}
-                        target="_blank"
-                        href="/syl_website_terms_and_conditions_of_use.pdf"
-                      >
-                        Terms and Conditions
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        style={{ color: "white" }}
-                        target="_blank"
-                        href="/faq-Answers.pdf"
-                      >
-                        FAQ
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        style={{ color: "white" }}
-                        target="_blank"
-                        href="/who-are-we.pdf"
-                      >
-                        Who are we
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        style={{ color: "white" }}
-                        target="_self"
-                        href={Constants.AddPlaceURL}
-                      >
-                        Register your local
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        style={{ color: "white" }}
-                        onClick={() => {
-                          this.showFAQModal();
-                        }}
-                      >
-                        FAQ
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </Col>
-            </Row>
-            <Row className="footer-row">
-              <Col offset={5} span={9} style={{ textAlign: "left" }}>
-                <div>
-                  <br />
-                </div>
-              </Col>
-              <Col offset={0} span={9} style={{ textAlign: "left" }}>
-                <div>
-                  <p>Copyright saveyourlocal 2020</p>
-                </div>
-              </Col>
+              </Row>
+              <Row className="footer-menu" justify="space-around">
+                <Col
+                  xs={{ span: 20, offset: 0 }}
+                  sm={{ span: 20, offset: 0 }}
+                  md={{ span: 6, offset: 0 }}
+                  lg={{ span: 6, offset: 0 }}
+                  xl={{ span: 6, offset: 0 }}
+                  style={{ textAlign: "left" }}
+                >
+                  <img className="footer-logo" src="/footer-logo.png" />
+                </Col>
+                <Col
+                  xs={{ span: 20, offset: 0 }}
+                  sm={{ span: 20, offset: 0 }}
+                  md={{ span: 6, offset: 0 }}
+                  lg={{ span: 6, offset: 0 }}
+                  xl={{ span: 6, offset: 0 }}
+                  style={{ textAlign: "left" }}
+                >
+                  <div>
+                    <Title level={3} style={{ color: "white" }}>
+                      Quick Menu
+                    </Title>
+                    <ul className="menu-list">
+                      <li>
+                        <a
+                          style={{ color: "white" }}
+                          target="_blank"
+                          href="/syl_privacy_policy.pdf"
+                        >
+                          Privacy Policy
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          style={{ color: "white" }}
+                          target="_blank"
+                          href="/syl_website_terms_and_conditions_of_use.pdf"
+                        >
+                          Terms and Conditions
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          style={{ color: "white" }}
+                          target="_blank"
+                          href="/faq-Answers.pdf"
+                        >
+                          FAQ
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          style={{ color: "white" }}
+                          target="_blank"
+                          href="/who-are-we.pdf"
+                        >
+                          Who are we
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          style={{ color: "white" }}
+                          target="_self"
+                          href={Constants.AddPlaceURL}
+                        >
+                          Register your local
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          style={{ color: "white" }}
+                          onClick={() => {
+                            this.showFAQModal();
+                          }}
+                        >
+                          FAQ
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </Col>
+              </Row>
+              <Row className="footer-row">
+                <Col offset={5} span={9} style={{ textAlign: "left" }}>
+                  <div>
+                    <br />
+                  </div>
+                </Col>
+                <Col offset={0} span={9} style={{ textAlign: "left" }}>
+                  <div>
+                    <p>Copyright saveyourlocal 2020</p>
+                  </div>
+                </Col>
+              </Row>
             </Row>
           </div>
         </div>

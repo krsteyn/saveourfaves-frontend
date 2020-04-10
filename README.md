@@ -25,6 +25,3 @@ Builds the app for production to the `build` folder.<br />
 
 Once built, you can deploy that build/ folder to the Nginx container under /usr/local/build/current/
 
-### Other notes
-
-The snugtop.jpeg image was provided by The Snug in San Francisco.

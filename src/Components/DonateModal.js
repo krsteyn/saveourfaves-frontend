@@ -13,6 +13,7 @@ function DonateModal(props) {
       footer={<span></span>}
     >
       <title>Coming Soon</title>
+      <span>Coming Soon</span>
     </Modal>
   );
 }
