@@ -223,8 +223,8 @@ class App extends React.Component {
                       level={1}
                       style={{ color: "white", textAlign: "center" }}
                     >
-                      Your favorite South African small business might close
-                      forever. Help save it.
+                      Your favorite South African local business might close
+                      forever. Help save it now.
                     </Title>
                     <Row justify="space-around">
                       <Col className="action-button-wrapper">
@@ -383,6 +383,24 @@ class App extends React.Component {
                           href="/who-are-we.pdf"
                         >
                           Who are we
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          style={{ color: "white" }}
+                          target="_blank"
+                          href="/syl_merchant_agreement.pdf"
+                        >
+                          Merchant Agreement
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          style={{ color: "white" }}
+                          target="_blank"
+                          href="/syl_user_agreement.pdf"
+                        >
+                          User Agreement
                         </a>
                       </li>
                       <li>
