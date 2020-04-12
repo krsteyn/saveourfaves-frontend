@@ -51,9 +51,9 @@ function FAQModal(props) {
         "African during the Covid-19 lockdown.  " +
         "</p>" +
         "<p>" +
-        "Save your Local is a non-profit company which has secured, on a pro bono basis, the services of" +
-        "a number of partner businesses which have worked together to create a marketplace where" +
-        "small businesses can advertise their goods and services and sell vouchers which can later be" +
+        "Save your Local is a non-profit company which has secured, on a pro bono basis, the services of " +
+        "a number of partner businesses which have worked together to create a marketplace where " +
+        "small businesses can advertise their goods and services and sell vouchers which can later be " +
         "redeemed at their establishments. " +
         "</p>"
     },
@@ -62,7 +62,7 @@ function FAQModal(props) {
       body:
         "<p>" +
         "A number of businesses and people have all been involved to ensure that Save Your Local was " +
-        "able to launch and assist businesses as fast as possible. Have a look at the tab at the top of our" +
+        "able to launch and assist businesses as fast as possible. Have a look at the tab at the top of our " +
         "landing page, to see who has been involved. " +
         "</p>" +
         "<p>" +

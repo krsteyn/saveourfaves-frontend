@@ -8,6 +8,7 @@ import Areas from "./CityData/Areas";
 import Config from "./Config";
 import GoogleAnalyticsTag from "./Components/GoogleAnalyticsTag";
 import FAQModal from "./Components/FAQModal";
+import AboutUsModal from "./Components/AboutUsModal";
 import AddNewPlaceModal from "./Components/AddNewPlaceModal";
 import DonateModal from "./Components/DonateModal";
 import LogEngagementEvent from "./Logging";
@@ -43,6 +44,7 @@ class App extends React.Component {
       currentArea: currentArea,
       addPlaceVisible: path === "addplace",
       donateVisible: false,
+      aboutUsVisible: false,
       preferredProviders: ["Hyperli"]
     };
 
@@ -66,6 +68,14 @@ class App extends React.Component {
 
   hideFAQModal() {
     this.setState({ faqVisible: false });
+  }
+
+  showAboutUsModal() {
+    this.setState({ aboutUsVisible: true });
+  }
+
+  hideAboutUsModal() {
+    this.setState({ aboutUsVisible: false });
   }
 
   showDonateModal() {
@@ -111,6 +121,12 @@ class App extends React.Component {
               shouldShow={this.state.faqVisible}
               onClose={() => {
                 this.hideFAQModal();
+              }}
+            />
+            <AboutUsModal
+              shouldShow={this.state.aboutUsVisible}
+              onClose={() => {
+                this.hideAboutUsModal();
               }}
             />
             <AddNewPlaceModal
@@ -176,12 +192,23 @@ class App extends React.Component {
                         <a href="#">
                           <Title
                             onClick={() => {
-                              this.showFAQModal();
+                              this.showAboutUsModal();
                             }}
                             className="header-link"
                             level={4}
                           >
                             About Us
+                          </Title>
+                        </a>
+                        <a href="#">
+                          <Title
+                            onClick={() => {
+                              this.showFAQModal();
+                            }}
+                            className="header-link"
+                            level={4}
+                          >
+                            FAQ
                           </Title>
                         </a>
                         <Popover content={<ShareOptions />}>
@@ -370,10 +397,11 @@ class App extends React.Component {
                       <li>
                         <a
                           style={{ color: "white" }}
-                          target="_blank"
-                          href="/who-are-we.pdf"
+                          onClick={() => {
+                            this.showFAQModal();
+                          }}
                         >
-                          Who are we
+                          About Us
                         </a>
                       </li>
                       <li>
@@ -410,7 +438,7 @@ class App extends React.Component {
                             this.showFAQModal();
                           }}
                         >
-                          About Us
+                          FAQ
                         </a>
                       </li>
                     </ul>
