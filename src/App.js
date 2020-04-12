@@ -398,7 +398,7 @@ class App extends React.Component {
                         <a
                           style={{ color: "white" }}
                           onClick={() => {
-                            this.showFAQModal();
+                            this.showAboutUsModal();
                           }}
                         >
                           About Us
