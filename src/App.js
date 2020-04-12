@@ -371,15 +371,6 @@ class App extends React.Component {
                         <a
                           style={{ color: "white" }}
                           target="_blank"
-                          href="/faq-Answers.pdf"
-                        >
-                          FAQ
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          target="_blank"
                           href="/who-are-we.pdf"
                         >
                           Who are we
@@ -419,7 +410,7 @@ class App extends React.Component {
                             this.showFAQModal();
                           }}
                         >
-                          FAQ
+                          About Us
                         </a>
                       </li>
                     </ul>
