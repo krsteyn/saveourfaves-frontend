@@ -18,7 +18,7 @@ class FAQEntry extends React.Component {
     return (
       <>
         <h4
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer", fontWeight: "bold" }}
           onClick={event => this.setState({ expanded: !this.state.expanded })}
         >
           {this.props.title}

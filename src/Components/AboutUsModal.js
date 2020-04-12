@@ -5,7 +5,7 @@ class FAQEntry extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      expanded: false
+      expanded: true
     };
   }
 
@@ -33,7 +33,7 @@ class FAQEntry extends React.Component {
 function AboutUsModal(props) {
   const consumerFAQs = [
     {
-      title: "WHo Are We?:",
+      title: "Who Are We?:",
       body:
         "<p>" +
         "K2020183515 (South Africa) NPC (trading as Save Your Local) (“Save Your Local”, “we” or “us”) is " +
