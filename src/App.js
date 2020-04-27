@@ -252,7 +252,7 @@ class App extends React.Component {
                           Your favorite South African local business might close
                           forever.<strong> Help save it now.</strong>
                         </Title>
-                        <p className="font-body-1">
+                        <p className="font-body-custom">
                           Our small businesses need us more than ever. Even
                           though we can't leave home, we can still support our
                           local restaurants, and other small businesses by
@@ -272,7 +272,7 @@ class App extends React.Component {
                         <div>
                           <div style={{ "margin-top": "-4px;" }}>
                             <img
-                              className="suggested-place-x"
+                              className="suggested-place-custom"
                               src="https://media.defense.gov/2019/Jul/30/2002164249/-1/-1/0/190730-A-HG995-1002.PNG"
                             />
                           </div>
@@ -334,7 +334,7 @@ class App extends React.Component {
                       }}
                     >
                       <Title level={1}>3 weeks can kill a business</Title>
-                      <p className="font-body-1">
+                      <p className="font-body-custom">
                         Businesses have many fixed costs: rent, labour, loan
                         repayments, insurance, supplies, repairs - and the list
                         goes on. Even successful small businesses have very thin
