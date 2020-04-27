@@ -143,7 +143,7 @@ class App extends React.Component {
               }}
             />
             <Row className="covid-banner">
-              <p>
+              <h4>
                 <strong>Stay informed!</strong> Visit the SA Department of
                 Health's website for COVID-19 updates:
                 <a
@@ -153,22 +153,16 @@ class App extends React.Component {
                 >
                   www.sacoronavirus.co.za
                 </a>
-              </p>
+              </h4>
             </Row>
             <Row className="hero-row" justify="centre">
-              <Row
-                style={{
-                  maxWidth: "1100px",
-                  margin: "0px auto",
-                  minWidth: "0",
-                  width: "100%"
-                }}
-              >
+              <Row>
                 <Row className="top-header">
-                  <Col span={12} offset={0}>
+                  <Col span={7} offset={0}>
                     <div
                       style={{
-                        width: "100%"
+                        width: "100%",
+                        padding: "10px 10px"
                       }}
                     >
                       <Title
@@ -182,10 +176,11 @@ class App extends React.Component {
                       </Title>
                     </div>
                   </Col>
-                  <Col span={12} offset={0}>
+                  <Col span={17} offset={0}>
                     <div
                       style={{
-                        width: "100%"
+                        width: "100%",
+                        padding: "30px 30px"
                       }}
                     >
                       <div style={{ float: "right" }}>
@@ -197,7 +192,7 @@ class App extends React.Component {
                             className="header-link"
                             level={4}
                           >
-                            About Us
+                            <b>ABOUT</b>
                           </Title>
                         </a>
                         <a href="#">
@@ -208,27 +203,16 @@ class App extends React.Component {
                             className="header-link"
                             level={4}
                           >
-                            FAQ
+                            <b>FAQ</b>
                           </Title>
                         </a>
-                        <Popover content={<ShareOptions />}>
-                          <a>
-                            <Title
-                              className="header-link header-share-link"
-                              level={4}
-                            >
-                              Tell friends
-                            </Title>
-                          </a>
-                        </Popover>
                         <Button
                           onClick={event => {
                             this.showAddModal();
                           }}
-                          shape="round"
                           className="header-button header-add-place-button"
                         >
-                          Add Local
+                          <b>ADD A BUSINESS</b>
                         </Button>
                       </div>
                     </div>
@@ -245,50 +229,76 @@ class App extends React.Component {
                     span={20}
                     offset={0}
                     style={{ textAlign: "center", padding: "20px 0px" }}
-                  >
-                    <Title
-                      level={1}
-                      style={{ color: "white", textAlign: "center" }}
+                  ></Col>
+                </Row>
+                <Row className="top-body">
+                  <Col span={17} offset={0}>
+                    <div
+                      style={{
+                        width: "100%",
+                        padding: "20px"
+                      }}
                     >
-                      Your favorite South African local business might close
-                      forever. Help save it now.
-                    </Title>
-                    <Row justify="space-around">
-                      <Col className="action-button-wrapper">
-                        <img
-                          src="./register.png"
-                          className="action-button-images"
-                          onClick={event => {
-                            this.showAddModal();
-                          }}
-                        />{" "}
-                        <br />
-                        <span className="action-button-images-text">
-                          Add Your Local
-                        </span>
+                      <Col
+                        offset={0}
+                        xs={100}
+                        sm={100}
+                        md={100}
+                        lg={{ span: 2, offset: 0 }}
+                        xl={{ span: 20, offset: 0 }}
+                        style={{ textAlign: "left" }}
+                      >
+                        <Title level={1}>
+                          Your favorite South African local business might close
+                          forever.<strong> Help save it now.</strong>
+                        </Title>
+                        <p className="font-body-1">
+                          Our small businesses need us more than ever. Even
+                          though we can't leave home, we can still support our
+                          local restaurants, and other small businesses by
+                          buying a voucher now, use it later.
+                        </p>
                       </Col>
-                      <Col className="action-button-wrapper">
-                        <img
-                          src="./donate.png"
-                          className="action-button-images"
-                          onClick={event => {
-                            this.showDonateModal();
-                          }}
-                        />{" "}
-                        <br />
-                        <span className="action-button-images-text">
-                          Donate
-                        </span>
-                      </Col>
-                    </Row>
+                    </div>
                   </Col>
-                  <Col
-                    sm={{ span: 20, offset: 0 }}
-                    md={{ span: 20, offset: 0 }}
-                    lg={{ span: 20, offset: 0 }}
-                  >
+                  <Col span={7} offset={0}>
+                    <div
+                      style={{
+                        width: "100%",
+                        padding: "20px"
+                      }}
+                    >
+                      <div style={{ float: "right" }}>
+                        <div>
+                          <div style={{ "margin-top": "-4px;" }}>
+                            <img
+                              className="suggested-place-x"
+                              src="https://media.defense.gov/2019/Jul/30/2002164249/-1/-1/0/190730-A-HG995-1002.PNG"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Col>
+                </Row>
+                <Row
+                  justify="center"
+                  style={{
+                    width: "100%",
+                    padding: "20px 0px"
+                  }}
+                ></Row>
+                <Row
+                  justify="center"
+                  style={{
+                    width: "100%",
+                    padding: "20px 0px",
+                    textAlign: "center"
+                  }}
+                >
+                  <Col span={24}>
                     <div className="main-results">
-                      <div style={{ padding: 20 }}>
+                      <div style={{ padding: "50px 0px" }}>
                         <AreaContext.Consumer>
                           {value => {
                             return (
@@ -314,148 +324,129 @@ class App extends React.Component {
                     </div>
                   </Col>
                 </Row>
-                <Row className="footer-content" justify="space-around">
-                  <Col
-                    offset={0}
-                    xs={18}
-                    sm={18}
-                    md={9}
-                    lg={{ span: 9, offset: 0 }}
-                    xl={{ span: 8, offset: 0 }}
-                    style={{ textAlign: "left" }}
-                  >
-                    <Title level={3}>Our duty as loyal customers</Title>
-                    <p>
-                      Our small businesses need us more than ever. Even though
-                      we can't leave home, we can still support our local
-                      restaurants, and other small businesses by buying a
-                      voucher now, use it later.
-                    </p>
-                  </Col>
-                  <Col
-                    offset={0}
-                    xs={18}
-                    sm={18}
-                    md={9}
-                    lg={8}
-                    xl={{ span: 8, offset: 0 }}
-                    style={{ textAlign: "left" }}
-                  >
-                    <Title level={3}>3 weeks can kill a business</Title>
-                    <p>
-                      Businesses have many fixed costs: rent, labour, loan
-                      repayments, insurance, supplies, repairs - and the list
-                      goes on. Even successful small businesses have very thin
-                      margins of 3-5%. The lockdown is keeping customers at
-                      home, and tipping the balance towards bankruptcy.
-                    </p>
+                <Row className="footer-content top-body" justify="space-around">
+                  <Col span={17} offset={0}>
+                    <div
+                      style={{
+                        width: "100%",
+                        padding: "20px",
+                        textAlign: "center"
+                      }}
+                    >
+                      <Title level={1}>3 weeks can kill a business</Title>
+                      <p className="font-body-1">
+                        Businesses have many fixed costs: rent, labour, loan
+                        repayments, insurance, supplies, repairs - and the list
+                        goes on. Even successful small businesses have very thin
+                        margins of 3-5%. The lockdown is keeping customers at
+                        home, and tipping the balance towards bankruptcy.
+                      </p>
+                    </div>
                   </Col>
                 </Row>
               </Row>
-              <Row className="footer-menu" justify="space-around">
-                <Col
-                  xs={{ span: 20, offset: 0 }}
-                  sm={{ span: 20, offset: 0 }}
-                  md={{ span: 6, offset: 0 }}
-                  lg={{ span: 6, offset: 0 }}
-                  xl={{ span: 6, offset: 0 }}
-                  style={{ textAlign: "left" }}
-                >
-                  <img className="footer-logo" src="/footer-logo.png" />
-                </Col>
-                <Col
-                  xs={{ span: 20, offset: 0 }}
-                  sm={{ span: 20, offset: 0 }}
-                  md={{ span: 6, offset: 0 }}
-                  lg={{ span: 6, offset: 0 }}
-                  xl={{ span: 6, offset: 0 }}
-                  style={{ textAlign: "left" }}
-                >
-                  <div>
-                    <Title level={3} style={{ color: "white" }}>
-                      Quick Menu
+              <Row className="footer-menu">
+                <Col span={7} offset={0}>
+                  <div
+                    style={{
+                      width: "100%",
+                      padding: "0px 50px"
+                    }}
+                  >
+                    <Title style={{ float: "left", color: "white" }} level={4}>
+                      <img src="/landscape-logo.png" className="header-logo" />
                     </Title>
-                    <ul className="menu-list">
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          target="_blank"
-                          href="/syl_privacy_policy.pdf"
-                        >
-                          Privacy Policy
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          target="_blank"
-                          href="/syl_website_terms_and_conditions_of_use.pdf"
-                        >
-                          Terms and Conditions
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          onClick={() => {
-                            this.showAboutUsModal();
-                          }}
-                        >
-                          About Us
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          target="_blank"
-                          href="/syl_merchant_agreement.pdf"
-                        >
-                          Merchant Agreement
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          target="_blank"
-                          href="/syl_user_agreement.pdf"
-                        >
-                          User Agreement
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          target="_self"
-                          href={Constants.AddPlaceURL}
-                        >
-                          Register your local
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          style={{ color: "white" }}
-                          onClick={() => {
-                            this.showFAQModal();
-                          }}
-                        >
-                          FAQ
-                        </a>
-                      </li>
-                    </ul>
+                  </div>
+                </Col>
+                <Col span={17} offset={0}>
+                  <div
+                    style={{
+                      width: "100%",
+                      padding: "10px"
+                    }}
+                  >
+                    <div style={{ float: "left" }}>
+                      <ul>
+                        <li>
+                          <a
+                            style={{ color: "white" }}
+                            target="_blank"
+                            href="/syl_privacy_policy.pdf"
+                          >
+                            Privacy Policy
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            style={{ color: "white" }}
+                            target="_blank"
+                            href="/syl_website_terms_and_conditions_of_use.pdf"
+                          >
+                            Terms and Conditions
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            style={{ color: "white" }}
+                            onClick={() => {
+                              this.showAboutUsModal();
+                            }}
+                          >
+                            About Us
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            style={{ color: "white" }}
+                            target="_blank"
+                            href="/syl_merchant_agreement.pdf"
+                          >
+                            Merchant Agreement
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            style={{ color: "white" }}
+                            target="_blank"
+                            href="/syl_user_agreement.pdf"
+                          >
+                            User Agreement
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            style={{ color: "white" }}
+                            target="_self"
+                            href={Constants.AddPlaceURL}
+                          >
+                            Register your local
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            style={{ color: "white" }}
+                            onClick={() => {
+                              this.showFAQModal();
+                            }}
+                          >
+                            FAQ
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </Col>
               </Row>
-              <Row className="footer-row">
-                <Col offset={5} span={9} style={{ textAlign: "left" }}>
-                  <div>
-                    <br />
-                  </div>
-                </Col>
-                <Col offset={0} span={9} style={{ textAlign: "left" }}>
-                  <div>
-                    <p>Copyright saveyourlocal 2020</p>
-                  </div>
-                </Col>
+              <Row
+                justify="center"
+                style={{
+                  width: "100%",
+                  textAlign: "center"
+                }}
+              >
+                <div className="footer-row" content={<ShareOptions />}>
+                  <p>TELL YOUR FRIENDS</p>
+                </div>
               </Row>
             </Row>
           </div>
