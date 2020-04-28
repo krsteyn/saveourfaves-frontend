@@ -45,7 +45,7 @@ export class SuggestedPlaceCards extends React.Component {
       suggestedPlaceCards = [...Array(9).keys()].map(placeholder => (
         <div key={placeholder} className="suggested-place">
           <div style={{ marginTop: -4 }}>
-            <Skeleton height={168} />
+            <Skeleton height={275} />
           </div>
         </div>
       ));
@@ -53,7 +53,9 @@ export class SuggestedPlaceCards extends React.Component {
     return (
       <div ref={this.props.passRef}>
         <section className="suggestions-container">
-          <Row style={{ justifyContent: "center", minWidth:0 }}>{suggestedPlaceCards}</Row>
+          <Row style={{ justifyContent: "center", minWidth: 0 }}>
+            {suggestedPlaceCards}
+          </Row>
         </section>
         {this.props.moreAvailable && (
           <div style={{ textAlign: "center" }}>

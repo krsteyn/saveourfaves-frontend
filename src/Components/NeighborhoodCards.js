@@ -202,7 +202,7 @@ export class NeighborhoodCards extends React.Component {
     return (
       <>
         <div className="explore-neighborhood-section">
-          <Title className="section-title" level={4}>
+          <Title className="section-title" level={4} style={{ color: "white" }}>
             Or explore by neighborhood in{" "}
             <AreaDropdown
               currentArea={this.props.currentArea}

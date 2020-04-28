@@ -1,9 +1,13 @@
 import React from "react";
+import { Input } from "antd";
+import { AudioOutlined } from "@ant-design/icons";
 import SFPlaces from "../CityData/Places";
 import Autosuggest from "react-autosuggest";
 import { LogEngagementEvent } from "../Logging";
 import { AddNewPlaceModal } from "./AddNewPlaceModal";
 import axios from "axios";
+
+const { Search } = Input;
 
 export class PlaceAutosuggestion extends React.Component {
   maxSuggestions = 8;

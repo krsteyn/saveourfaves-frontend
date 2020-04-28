@@ -1,7 +1,9 @@
 import "./App.scss";
 import React from "react";
 import axios from "axios";
+import "@fortawesome/fontawesome-free/css/all.css";
 
+import { FacebookProvider, Share } from "react-facebook";
 import { Button, Popover, Typography, Row, Col } from "antd";
 import Areas from "./CityData/Areas";
 
@@ -444,8 +446,23 @@ class App extends React.Component {
                   textAlign: "center"
                 }}
               >
-                <div className="footer-row" content={<ShareOptions />}>
-                  <p>TELL YOUR FRIENDS</p>
+                <div className="footer-row">
+                  <p-custom className="font-body-custom">
+                    TELL YOUR FRIENDS
+                    <a
+                      class="fab fa-facebook"
+                      style={{ "font-size": "24px", color: "white" }}
+                    ></a>
+                    <a
+                      class="fab fa-twitter"
+                      style={{ "font-size": "24px", color: "white" }}
+                      onClick={() => {
+                        window.open(
+                          "https://twitter.com/intent/tweet?url=https://saveyourlocal.co.za&text=Local%20businesses%20need%20us%20more%20than%20ever%20%E2%80%93%20gift%20cards%20can%20make%20a%20big%20difference.%20Please%20join%20me%20in%20supporting%20your%20favorite%20local%20restaurants%20at"
+                        );
+                      }}
+                    ></a>
+                  </p-custom>
                 </div>
               </Row>
             </Row>

@@ -175,7 +175,7 @@ export function AddNewPlaceModal(props) {
               }}
               style={{ display: showDonationInput ? "block" : "none" }}
               type="text"
-              placeholder="Donation/BackaBuddy Link"
+              placeholder="Donation Link"
               value={donationLink}
             />
           </div>
