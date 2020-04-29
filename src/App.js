@@ -157,25 +157,17 @@ class App extends React.Component {
                 </a>
               </h4>
             </Row>
+
             <Row className="hero-row" justify="centre">
               <Row>
                 <Row className="top-header">
                   <Col span={7} offset={0}>
                     <div
                       style={{
-                        width: "100%",
-                        padding: "10px 10px"
+                        width: "100%"
                       }}
                     >
-                      <Title
-                        style={{ float: "left", color: "white" }}
-                        level={4}
-                      >
-                        <img
-                          src="/landscape-logo.png"
-                          className="header-logo"
-                        />
-                      </Title>
+                      <img src="/landscape-logo.png" className="header-logo" />
                     </div>
                   </Col>
                   <Col span={17} offset={0}>
@@ -351,20 +343,17 @@ class App extends React.Component {
                 <Col span={7} offset={0}>
                   <div
                     style={{
-                      width: "100%",
-                      padding: "0px 50px"
+                      width: "100%"
                     }}
                   >
-                    <Title style={{ float: "left", color: "white" }} level={4}>
-                      <img src="/landscape-logo.png" className="header-logo" />
-                    </Title>
+                    <img src="/landscape-logo.png" className="footer-logo" />
                   </div>
                 </Col>
                 <Col span={17} offset={0}>
                   <div
                     style={{
                       width: "100%",
-                      padding: "10px"
+                      padding: "20px"
                     }}
                   >
                     <div style={{ float: "left" }}>

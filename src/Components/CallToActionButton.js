@@ -10,13 +10,11 @@ export class CallToActionButton extends React.Component {
     const className =
       size === "large" ? "large-primary-button" : "secondary-button";
     return (
-      <div key={place.placeID}>
+      <div key={place.placeID} className={" neighborhood-card-button-buy"}>
         {place.giftCardURL && (
           <Button
-            shape="round"
             size={size}
-            className={className}
-            type="default"
+            className={"ant-btn header-button"}
             onClick={event => {
               LogEngagementEvent(
                 "user-click",
@@ -26,7 +24,10 @@ export class CallToActionButton extends React.Component {
               window.open(place.giftCardURL);
             }}
           >
-            Get Voucher
+            <p-custom style={{ "font-size": "0.8em" }}>
+              {" "}
+              <b>BUY A VOUCHER</b>
+            </p-custom>
           </Button>
         )}
         {!place.giftCardURL && (

@@ -18,15 +18,19 @@ export function ExtraActionButtons(props) {
   var spansToRender = [];
   toRender.forEach((value, index) => {
     spansToRender.push(
-      <span
+      <button
+        type="button"
+        className="ant-btn ant-btn header-button"
         onClick={e => {
           handleClick(value, place.placeID);
         }}
-        className={"extra-action-button " + classOrder[index]}
       >
-        {value.text}
-      </span>
+        <p-custom style={{ "font-size": "0.8em" }}>
+          <b>{value.text == "donate" ? "DONATE NOW" : "TAKEOUT"}</b>
+        </p-custom>
+      </button>
     );
   });
-  return <div className="extra-button-container">{spansToRender}</div>;
+
+  return <div className="neighborhood-card-button-donate">{spansToRender}</div>;
 }

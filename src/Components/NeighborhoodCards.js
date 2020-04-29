@@ -214,6 +214,7 @@ export class NeighborhoodCards extends React.Component {
           <section
             className="neighborhood-card-container"
             style={{
+              padding: "90x 0px 10px 0px",
               maxWidth:
                 this.state.windowWidth >= 576
                   ? this.state.windowWidth - 200

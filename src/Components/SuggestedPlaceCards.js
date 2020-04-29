@@ -17,46 +17,43 @@ export class SuggestedPlaceCards extends React.Component {
               position: "relative",
               backgroundPosition: "center center",
               backgroundImage: "url(" + suggestion.imageURL + ")",
-              minHeight: "80px"
+              minHeight: "155px",
+              padding: "10px"
             }}
-          >
-            <ExtraActionButtons place={suggestion} />
-          </Row>
+          ></Row>
           <Row style={{ minHeight: "88px" }}>
             <Title
               className="suggestion-title"
               style={{
+                color: "white",
                 textAlign: "center",
                 width: "100%",
                 marginTop: "12px",
-                padding: "0px 6px"
+                padding: "10px 6px"
               }}
               level={4}
             >
               {suggestion.name}
             </Title>
-            <div style={{ margin: "0px auto" }}>
-              <CallToActionButton place={suggestion} size={"default"} />
-            </div>
+            <CallToActionButton place={suggestion} size={"default"} />
+            <ExtraActionButtons place={suggestion} size={"default"} />
           </Row>
         </div>
       ));
     } else {
       suggestedPlaceCards = [...Array(9).keys()].map(placeholder => (
-        <div key={placeholder} className="suggested-place">
+        <div key={placeholder}>
           <div style={{ marginTop: -4 }}>
-            <Skeleton height={275} />
+            <Skeleton height={310} />
           </div>
         </div>
       ));
     }
     return (
       <div ref={this.props.passRef}>
-        <section className="suggestions-container">
-          <Row style={{ justifyContent: "center", minWidth: 0 }}>
-            {suggestedPlaceCards}
-          </Row>
-        </section>
+        <Row style={{ justifyContent: "center", minWidth: 0 }}>
+          {suggestedPlaceCards}
+        </Row>
         {this.props.moreAvailable && (
           <div style={{ textAlign: "center" }}>
             <Button

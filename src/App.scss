@@ -40,6 +40,14 @@ h4 {
   }
 }
 
+.area-picker {
+  background-color: #189e49;
+  border: 0px solid;
+  outline: none;
+  height: 25px;
+  border-radius: 5px;
+}
+
 .app {
   text-align: center;
   overscroll-behavior: none;
@@ -164,6 +172,7 @@ h4 {
   background-color: #333333;
   padding-top: 10px;
   color: white !important;
+  bottom: 0;
 }
 
 .footer-content {
@@ -254,6 +263,12 @@ li a:hover {
 
 .header-logo {
   max-width: 65%;
+  padding: 10px;
+}
+
+.footer-logo {
+  max-width: 85%;
+  padding: 10px;
 }
 
 @media (max-width: 516px) {
@@ -404,10 +419,12 @@ div.header-sans {
   border: 0px solid;
   outline: none;
   height: 25px;
+  border-radius: 5px;
 }
 
 .area-picker:active {
   border: 0px solid;
+  border-radius: 5px;
 }
 
 .place-result {
@@ -442,9 +459,9 @@ div.header-sans {
   border-radius: 5px;
   padding-bottom: 0px;
   min-width: 150px;
-  width: 30%;
-  height: 275px;
-  margin: 0px 16px 16px 0px;
+  width: 24%;
+  height: 310px;
+  margin: 30px 10px 16px 15px;
 }
 
 .suggested-place span.photo-attribution {
@@ -464,7 +481,7 @@ div.header-sans {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  font-weight: 400;
+  font-weight: 40em;
 }
 
 .suggested-place .suggestion-details {
@@ -579,8 +596,37 @@ div.header-sans {
   }
 }
 
+.neighborhood-card-button-donate {
+  padding: 15px 0px 0px 10px;
+}
+
+.neighborhood-card-button-buy {
+  padding: 15px 0px 0px 40px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .footer-logo {
+    max-width: 85%;
+    padding: 20px 0px 0px 10px;
+    margin: 45px 10px 0px 10px;
+  }
+
+  .header-logo {
+    max-width: 100%;
+    padding: 30px;
+  }
+  .neighborhood-card-button-donate {
+    padding: 15px 0px 0px 40px;
+    margin: 0px 0px 0px -17px;
+  }
+
+  .neighborhood-card-button-buy {
+    padding: 15px 0px 0px 0px;
+    margin: 0px 0px 0px 15px;
+  }
+}
+
 .neighborhood-card-container {
-  height: 130px;
   overflow-x: hidden;
   overflow-y: hidden;
   overscroll-behavior: none;
@@ -588,7 +634,7 @@ div.header-sans {
   position: relative;
   white-space: nowrap;
   display: flex;
-  padding: 0px 4px;
+  padding: 35px 21%;
 }
 ::webkit-scrollbar {
   display: none;
@@ -612,44 +658,34 @@ div.header-sans {
 }
 
 .neighborhood-card-arrow {
+  -webkit-user-select: none;
   user-select: none;
-
   font-size: 1.5em;
-  color: $tertiary-text;
+  color: white;
   background-color: transparent;
-  width: 100px;
+  width: 25px;
   height: 100%;
   text-align: center;
   background-image: linear-gradient(
     to right,
     rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 1) 65%
+    transparent 65%
   );
   font-size: 2.5em;
   padding-top: 36px;
 }
 
 .neighborhood-card-arrow-right {
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 1) 95%
-  );
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 14px;
+  right: 14%;
   text-align: right;
 }
 
 .neighborhood-card-arrow-left {
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 95%
-  );
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 14px;
+  left: 14%;
   text-align: left;
 }
 
