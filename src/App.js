@@ -159,7 +159,7 @@ class App extends React.Component {
             </Row>
 
             <Row className="hero-row" justify="centre">
-              <Row>
+              <Row className="top-body">
                 <Row className="top-header">
                   <Col span={7} offset={0}>
                     <div

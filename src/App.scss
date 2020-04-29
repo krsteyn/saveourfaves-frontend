@@ -634,7 +634,7 @@ div.header-sans {
   position: relative;
   white-space: nowrap;
   display: flex;
-  padding: 35px 21%;
+  padding: 35px;
 }
 ::webkit-scrollbar {
   display: none;
@@ -662,7 +662,7 @@ div.header-sans {
   user-select: none;
   font-size: 1.5em;
   color: white;
-  background-color: transparent;
+  background-color: black;
   width: 25px;
   height: 100%;
   text-align: center;
@@ -677,15 +677,15 @@ div.header-sans {
 
 .neighborhood-card-arrow-right {
   position: absolute;
-  top: 14px;
-  right: 14%;
+  top: 15px;
+  right: 0;
   text-align: right;
 }
 
 .neighborhood-card-arrow-left {
   position: absolute;
-  top: 14px;
-  left: 14%;
+  top: 15px;
+  left: 0;
   text-align: left;
 }
 
