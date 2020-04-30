@@ -86,7 +86,7 @@ h4 {
 }
 
 .hero-row {
-  height: 90px;
+  height: 95px;
   background-color: $primary-color;
   padding-top: 0px;
   overscroll-behavior: none;
@@ -168,11 +168,7 @@ h4 {
 }
 
 .footer-menu {
-  width: 100%;
   background-color: #333333;
-  padding-top: 10px;
-  color: white !important;
-  bottom: 0;
 }
 
 .footer-content {
@@ -208,6 +204,16 @@ li a {
 
 li a:hover {
   background-color: #111111;
+}
+
+a {
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #333333;
 }
 
 // .menu-list {
@@ -262,18 +268,40 @@ li a:hover {
 }
 
 .header-logo {
-  max-width: 65%;
-  padding: 10px;
+  max-width: 90%;
+  margin: 10px 0px 0px 0px;
 }
 
 .footer-logo {
-  max-width: 85%;
   padding: 10px;
 }
 
 @media (max-width: 516px) {
+  .covid-banner {
+    width: 100%;
+  }
+  .hero-row {
+    width: 100%;
+  }
+  .top-header {
+    padding: 0px;
+    width: 0%;
+  }
+
   .header-logo {
-    max-width: 45%;
+    max-width: 100%;
+    margin: 0px 0px -50px 0px;
+    display: inline;
+  }
+  .upper-picture-layout {
+    display: none;
+    width: 0%;
+    margin: 0px 0px 0px 0px;
+  }
+
+  .upper-body-layout {
+    max-width: 100%;
+    text-align: center;
   }
 }
 
@@ -288,6 +316,26 @@ li a:hover {
 @media only screen and (max-width: 700px) {
   .header-share-link {
     display: none !important;
+  }
+}
+
+@media only screen and (max-width: 810px) {
+  .upper-picture-layout {
+    display: none;
+    width: 0%;
+    margin: 0px 0px 0px 0px;
+  }
+
+  .upper-body-layout {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 985px) {
+  .upper-picture-layout {
+    width: 35%;
+    margin: 20px 0px 0px 0px;
   }
 }
 
@@ -350,12 +398,7 @@ h4.ant-typography {
 .suggested-place-custom {
   border: 1px solid lightgray;
   border-radius: 5px;
-  padding: 0px 0px 0px 0px;
-  min-width: 100%;
   max-height: 290px;
-  height: 290px;
-  width: 50%;
-  margin: 0px 0px 0px -40px;
 }
 
 .fab {
@@ -375,9 +418,16 @@ p-custom {
   font-family: "helvetica", sans-serif;
 }
 
+.upper-body-layout {
+  max-width: 65%;
+}
+
 .top-body {
-  padding: 0px 50px;
-  width: 100%;
+  padding-top: 0px;
+  overscroll-behavior: none;
+  margin: 0px auto;
+  min-width: 0px;
+  width: 70%;
 }
 
 .top-body h1,
@@ -385,20 +435,6 @@ p-custom {
 .top-body h3,
 .top-body h4 {
   color: black !important;
-  font-weight: 400;
-  font-family: "helvetica", sans-serif;
-}
-
-.top-header {
-  padding: 0px 50px;
-  width: 100%;
-}
-
-.top-header h1,
-.top-header h2,
-.top-header h3,
-.top-header h4 {
-  color: white !important;
   font-weight: 400;
   font-family: "helvetica", sans-serif;
 }
@@ -452,6 +488,11 @@ div.header-sans {
   .suggestions-container {
     margin-top: 0px !important;
   }
+
+  .upper-body-layout {
+    max-width: 100%;
+    text-align: center;
+  }
 }
 
 .suggested-place {
@@ -462,6 +503,11 @@ div.header-sans {
   width: 24%;
   height: 310px;
   margin: 30px 10px 16px 15px;
+}
+
+.upper-picture-layout {
+  width: 35%;
+  margin: 20px 0px 0px 0px;
 }
 
 .suggested-place span.photo-attribution {
@@ -601,27 +647,80 @@ div.header-sans {
 }
 
 .neighborhood-card-button-buy {
-  padding: 15px 0px 0px 40px;
+  padding: 10px 0px 0px 40px;
+}
+
+.banner-layout {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 25px;
+}
+
+@media only screen and (max-width: 1640px) {
+  .neighborhood-card-button-donate {
+    padding: 10px 0px 0px 71px;
+  }
+
+  .neighborhood-card-button-buy {
+    padding: 10px 0px 0px 62px;
+  }
 }
 
 @media only screen and (max-width: 1400px) {
   .footer-logo {
-    max-width: 85%;
-    padding: 20px 0px 0px 10px;
-    margin: 45px 10px 0px 10px;
+    max-width: 100%;
+    margin: 10px 0px 0px 0px;
+  }
+
+  .banner-layout {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 25px;
   }
 
   .header-logo {
     max-width: 100%;
-    padding: 30px;
+    margin: 10px 0px 0px 0px;
   }
+
+  .upper-picture-layout {
+    width: 35%;
+    margin: 20px 0px 0px 0px;
+  }
+
+  .upper-body-layout {
+    max-width: 65%;
+  }
+
+  .top-header {
+    padding: 0px 50px;
+    width: 100%;
+    color: white;
+  }
+
+  .top-header h1,
+  .top-header h2,
+  .top-header h3,
+  .top-header h4 {
+    color: white !important;
+    font-weight: 400;
+    font-family: "helvetica", sans-serif;
+  }
+
+  //   .header-logo {
+  //     max-width: 100%;
+  //     padding: 0px;
+  //     margin: 20px ;
+  //   }
   .neighborhood-card-button-donate {
-    padding: 15px 0px 0px 40px;
+    padding: 10px 0px 0px 40px;
     margin: 0px 0px 0px -17px;
   }
 
   .neighborhood-card-button-buy {
-    padding: 15px 0px 0px 0px;
+    padding: 10px 0px 0px 0px;
     margin: 0px 0px 0px 15px;
   }
 }
@@ -645,6 +744,46 @@ div.header-sans {
 @media only screen and (max-width: 576px) {
   .neighborhood-card-container {
     margin-bottom: 12px !important;
+  }
+
+  .banner-layout {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .header-logo {
+    max-width: 100%;
+    margin: 0px 0px -50px 0px;
+  }
+}
+
+@media only screen and (max-width: 657px) {
+  .neighborhood-card-container {
+    margin-bottom: 12px !important;
+  }
+
+  .banner-layout {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .header-logo {
+    max-width: 100%;
+    margin: 20px 0px 0px 0px;
+  }
+
+  .upper-picture-layout {
+    display: none;
+    width: 0%;
+    margin: 0px 0px 0px 0px;
+  }
+  .upper-body-layout {
+    max-width: 100%;
+    text-align: center;
   }
 }
 
@@ -698,6 +837,16 @@ div.header-sans {
   h4.section-title {
     padding-top: 0px !important;
   }
+
+  .upper-picture-layout {
+    display: none;
+    width: 0%;
+    margin: 0px 0px 0px 0px;
+  }
+  .upper-body-layout {
+    max-width: 100%;
+    text-align: center;
+  }
 }
 
 @media (hover: none) and (pointer: coarse) {
@@ -707,6 +856,13 @@ div.header-sans {
   .neighborhood-card-container {
     overflow-x: scroll;
   }
+}
+
+.ant-btn:hover,
+.ant-btn:focus {
+  color: black;
+  background-color: #f7d311;
+  border-color: black;
 }
 
 .neighborhood-card-image {

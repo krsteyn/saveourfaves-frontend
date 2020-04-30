@@ -159,304 +159,203 @@ class App extends React.Component {
             </Row>
 
             <Row className="hero-row" justify="centre">
-              <Row className="top-body">
-                <Row className="top-header">
-                  <Col span={7} offset={0}>
-                    <div
-                      style={{
-                        width: "100%"
-                      }}
-                    >
-                      <img src="/landscape-logo.png" className="header-logo" />
-                    </div>
-                  </Col>
-                  <Col span={17} offset={0}>
-                    <div
-                      style={{
-                        width: "100%",
-                        padding: "30px 30px"
-                      }}
-                    >
-                      <div style={{ float: "right" }}>
-                        <a href="#">
-                          <Title
-                            onClick={() => {
-                              this.showAboutUsModal();
-                            }}
-                            className="header-link"
-                            level={4}
-                          >
-                            <b>ABOUT</b>
-                          </Title>
-                        </a>
-                        <a href="#">
-                          <Title
-                            onClick={() => {
-                              this.showFAQModal();
-                            }}
-                            className="header-link"
-                            level={4}
-                          >
-                            <b>FAQ</b>
-                          </Title>
-                        </a>
-                        <Button
-                          onClick={event => {
-                            this.showAddModal();
-                          }}
-                          className="header-button header-add-place-button"
-                        >
-                          <b>ADD A BUSINESS</b>
-                        </Button>
-                      </div>
-                    </div>
-                  </Col>
-                </Row>
-                <Row
-                  justify="center"
-                  style={{
-                    width: "100%"
-                  }}
-                >
-                  <Col
-                    xs={{ span: 20, offset: 0 }}
-                    span={20}
-                    offset={0}
-                    style={{ textAlign: "center", padding: "20px 0px" }}
-                  ></Col>
-                </Row>
-                <Row className="top-body">
-                  <Col span={17} offset={0}>
-                    <div
-                      style={{
-                        width: "100%",
-                        padding: "20px"
-                      }}
-                    >
-                      <Col
-                        offset={0}
-                        xs={100}
-                        sm={100}
-                        md={100}
-                        lg={{ span: 2, offset: 0 }}
-                        xl={{ span: 20, offset: 0 }}
-                        style={{ textAlign: "left" }}
-                      >
-                        <Title level={1}>
-                          Your favorite South African local business might close
-                          forever.<strong> Help save it now.</strong>
-                        </Title>
-                        <p className="font-body-custom">
-                          Our small businesses need us more than ever. Even
-                          though we can't leave home, we can still support our
-                          local restaurants, and other small businesses by
-                          buying a voucher now, use it later.
-                        </p>
-                      </Col>
-                    </div>
-                  </Col>
-                  <Col span={7} offset={0}>
-                    <div
-                      style={{
-                        width: "100%",
-                        padding: "20px"
-                      }}
-                    >
-                      <div style={{ float: "right" }}>
-                        <div>
-                          <div style={{ "margin-top": "-4px;" }}>
-                            <img
-                              className="suggested-place-custom"
-                              src="https://media.defense.gov/2019/Jul/30/2002164249/-1/-1/0/190730-A-HG995-1002.PNG"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </Col>
-                </Row>
-                <Row
-                  justify="center"
-                  style={{
-                    width: "100%",
-                    padding: "20px 0px"
-                  }}
-                ></Row>
-                <Row
-                  justify="center"
-                  style={{
-                    width: "100%",
-                    padding: "20px 0px",
-                    textAlign: "center"
-                  }}
-                >
-                  <Col span={24}>
-                    <div className="main-results">
-                      <div style={{ padding: "50px 0px" }}>
-                        <AreaContext.Consumer>
-                          {value => {
-                            return (
-                              <PlaceFilterDisplay
-                                updateArea={value.updateArea}
-                              />
-                            );
-                          }}
-                        </AreaContext.Consumer>
-                      </div>
-                      <div className="neighborhood-card-container-outer">
-                        <AreaContext.Consumer>
-                          {value => {
-                            return (
-                              <NeighborhoodCards
-                                currentArea={value.currentArea}
-                                updateArea={value.updateArea}
-                              />
-                            );
-                          }}
-                        </AreaContext.Consumer>
-                      </div>
-                    </div>
-                  </Col>
-                </Row>
-                <Row className="footer-content top-body" justify="space-around">
-                  <Col span={17} offset={0}>
-                    <div
-                      style={{
-                        width: "100%",
-                        padding: "20px",
-                        textAlign: "center"
-                      }}
-                    >
-                      <Title level={1}>3 weeks can kill a business</Title>
-                      <p className="font-body-custom">
-                        Businesses have many fixed costs: rent, labour, loan
-                        repayments, insurance, supplies, repairs - and the list
-                        goes on. Even successful small businesses have very thin
-                        margins of 3-5%. The lockdown is keeping customers at
-                        home, and tipping the balance towards bankruptcy.
-                      </p>
-                    </div>
-                  </Col>
-                </Row>
-              </Row>
-              <Row className="footer-menu">
-                <Col span={7} offset={0}>
-                  <div
-                    style={{
-                      width: "100%"
-                    }}
-                  >
-                    <img src="/landscape-logo.png" className="footer-logo" />
-                  </div>
-                </Col>
-                <Col span={17} offset={0}>
-                  <div
-                    style={{
-                      width: "100%",
-                      padding: "20px"
-                    }}
-                  >
-                    <div style={{ float: "left" }}>
-                      <ul>
-                        <li>
-                          <a
-                            style={{ color: "white" }}
-                            target="_blank"
-                            href="/syl_privacy_policy.pdf"
-                          >
-                            Privacy Policy
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            style={{ color: "white" }}
-                            target="_blank"
-                            href="/syl_website_terms_and_conditions_of_use.pdf"
-                          >
-                            Terms and Conditions
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            style={{ color: "white" }}
-                            onClick={() => {
-                              this.showAboutUsModal();
-                            }}
-                          >
-                            About Us
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            style={{ color: "white" }}
-                            target="_blank"
-                            href="/syl_merchant_agreement.pdf"
-                          >
-                            Merchant Agreement
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            style={{ color: "white" }}
-                            target="_blank"
-                            href="/syl_user_agreement.pdf"
-                          >
-                            User Agreement
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            style={{ color: "white" }}
-                            target="_self"
-                            href={Constants.AddPlaceURL}
-                          >
-                            Register your local
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            style={{ color: "white" }}
-                            onClick={() => {
-                              this.showFAQModal();
-                            }}
-                          >
-                            FAQ
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-              <Row
-                justify="center"
-                style={{
-                  width: "100%",
-                  textAlign: "center"
-                }}
-              >
-                <div className="footer-row">
-                  <p-custom className="font-body-custom">
-                    TELL YOUR FRIENDS
-                    <a
-                      class="fab fa-facebook"
-                      style={{ "font-size": "24px", color: "white" }}
-                    ></a>
-                    <a
-                      class="fab fa-twitter"
-                      style={{ "font-size": "24px", color: "white" }}
+              <Col span={7}>
+                <img src="/landscape-logo.png" className="header-logo" />
+              </Col>
+              <Col span={17}>
+                <div className="banner-layout">
+                  <a href="#">
+                    <Title
                       onClick={() => {
-                        window.open(
-                          "https://twitter.com/intent/tweet?url=https://saveyourlocal.co.za&text=Local%20businesses%20need%20us%20more%20than%20ever%20%E2%80%93%20gift%20cards%20can%20make%20a%20big%20difference.%20Please%20join%20me%20in%20supporting%20your%20favorite%20local%20restaurants%20at"
-                        );
+                        this.showAboutUsModal();
                       }}
-                    ></a>
-                  </p-custom>
+                      className="header-link"
+                      level={4}
+                      style={{ color: "white" }}
+                    >
+                      <b>ABOUT</b>
+                    </Title>
+                  </a>
+                  <a href="#">
+                    <Title
+                      onClick={() => {
+                        this.showFAQModal();
+                      }}
+                      className="header-link"
+                      level={4}
+                      style={{ color: "white" }}
+                    >
+                      <b>FAQ</b>
+                    </Title>
+                  </a>
+                  <Button
+                    onClick={event => {
+                      this.showAddModal();
+                    }}
+                    className="header-button header-add-place-button"
+                  >
+                    <b>ADD A BUSINESS</b>
+                  </Button>
                 </div>
-              </Row>
+              </Col>
+            </Row>
+
+            <Row className="top-body">
+              <div className="upper-body-layout">
+                <Title level={1}>
+                  Your favorite South African local business might close
+                  forever.<strong> Help save it now.</strong>
+                </Title>
+                <p className="font-body-custom">
+                  Our small businesses need us more than ever. Even though we
+                  can't leave home, we can still support our local restaurants,
+                  and other small businesses by buying a voucher now, use it
+                  later.
+                </p>
+              </div>
+              <div className="upper-picture-layout">
+                <img
+                  className="suggested-place-custom"
+                  src="https://media.defense.gov/2019/Jul/30/2002164249/-1/-1/0/190730-A-HG995-1002.PNG"
+                />
+              </div>
             </Row>
           </div>
         </div>
+
+        <Row className="footer-logo"></Row>
+
+        <Col span={24} className="hero-row">
+          <div className="main-results">
+            <div style={{ padding: "50px 0px" }}>
+              <AreaContext.Consumer>
+                {value => {
+                  return <PlaceFilterDisplay updateArea={value.updateArea} />;
+                }}
+              </AreaContext.Consumer>
+            </div>
+            <div className="neighborhood-card-container-outer">
+              <AreaContext.Consumer>
+                {value => {
+                  return (
+                    <NeighborhoodCards
+                      currentArea={value.currentArea}
+                      updateArea={value.updateArea}
+                    />
+                  );
+                }}
+              </AreaContext.Consumer>
+            </div>
+          </div>
+          <div
+            style={{
+              width: "100%",
+              padding: "40px",
+              textAlign: "center"
+            }}
+          >
+            <Title level={1}>3 weeks can kill a business</Title>
+            <p className="font-body-custom">
+              Businesses have many fixed costs: rent, labour, loan repayments,
+              insurance, supplies, repairs - and the list goes on. Even
+              successful small businesses have very thin margins of 3-5%. The
+              lockdown is keeping customers at home, and tipping the balance
+              towards bankruptcy.
+            </p>
+          </div>
+          <Row className="footer-menu" justify="centre">
+            <Col span={7} offset={0}>
+              <img src="/landscape-logo.png" className="header-logo" />
+            </Col>
+            <Col span={17} offset={0} style={{ padding: "26px" }}>
+              <ul>
+                <li>
+                  <a
+                    style={{ color: "white" }}
+                    target="_blank"
+                    href="/syl_privacy_policy.pdf"
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    style={{ color: "white" }}
+                    target="_blank"
+                    href="/syl_website_terms_and_conditions_of_use.pdf"
+                  >
+                    Terms and Conditions
+                  </a>
+                </li>
+                <li>
+                  <a
+                    style={{ color: "white" }}
+                    onClick={() => {
+                      this.showAboutUsModal();
+                    }}
+                  >
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    style={{ color: "white" }}
+                    target="_blank"
+                    href="/syl_merchant_agreement.pdf"
+                  >
+                    Merchant Agreement
+                  </a>
+                </li>
+                <li>
+                  <a
+                    style={{ color: "white" }}
+                    target="_blank"
+                    href="/syl_user_agreement.pdf"
+                  >
+                    User Agreement
+                  </a>
+                </li>
+                <li>
+                  <a
+                    style={{ color: "white" }}
+                    target="_self"
+                    href={Constants.AddPlaceURL}
+                  >
+                    Register your local
+                  </a>
+                </li>
+                <li>
+                  <a
+                    style={{ color: "white" }}
+                    onClick={() => {
+                      this.showFAQModal();
+                    }}
+                  >
+                    FAQ
+                  </a>
+                </li>
+              </ul>
+            </Col>
+          </Row>
+          <div className="footer-row" style={{ textAlign: "center" }}>
+            <p-custom className="font-body-custom">
+              TELL YOUR FRIENDS
+              <a
+                class="fab fa-facebook"
+                style={{ "font-size": "24px", color: "white" }}
+              ></a>
+              <a
+                class="fab fa-twitter"
+                style={{ "font-size": "24px", color: "white" }}
+                onClick={() => {
+                  window.open(
+                    "https://twitter.com/intent/tweet?url=https://saveyourlocal.co.za&text=Local%20businesses%20need%20us%20more%20than%20ever%20%E2%80%93%20gift%20cards%20can%20make%20a%20big%20difference.%20Please%20join%20me%20in%20supporting%20your%20favorite%20local%20restaurants%20at"
+                  );
+                }}
+              ></a>
+            </p-custom>
+          </div>
+        </Col>
         <GoogleAnalyticsTag analyticsID={Config.GoogleAnalyticsID} />
       </AreaContext.Provider>
     );

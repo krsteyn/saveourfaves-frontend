@@ -12,6 +12,7 @@ import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 
 export function AddNewPlaceModal(props) {
   const [giftLink, setGiftLink] = useState("");
+  const [secondGiftLink, setSecondGiftLink] = useState("");
   const [donationLink, setDonationLink] = useState("");
   const [showDonationInput, setShowDonationInput] = useState("");
   const [email, setEmail] = useState("");
@@ -30,6 +31,7 @@ export function AddNewPlaceModal(props) {
   const [counter, setCounter] = useState(0);
   function resetAndClose() {
     setGiftLink("");
+    setSecondGiftLink("");
     setEmail("");
     setPhoneNumber("");
     setHasSubmitted(false);
@@ -56,6 +58,7 @@ export function AddNewPlaceModal(props) {
         email: email,
         phone_number: phoneNumber,
         gift_card_url: giftLink,
+        gift_card_url_2nd: secondGiftLink,
         donation_url: donationLink,
         preferred_provided: preferredProvider
       })
@@ -125,6 +128,15 @@ export function AddNewPlaceModal(props) {
             placeholder="Voucher Link (if you know it)"
             value={giftLink}
           />
+          <input
+            className="add-link-modal-input"
+            onChange={event => {
+              setSecondGiftLink(event.target.value);
+            }}
+            type="text"
+            placeholder="2nd Voucher Link"
+            value={secondGiftLink}
+          />
           <span className="picker-label">
             {" "}
             Select Preferred Voucher Provider
@@ -159,26 +171,24 @@ export function AddNewPlaceModal(props) {
             placeholder="Contact Number (optional)"
             value={phoneNumber}
           />
-          <div style={{ marginTop: 8 }}>
-            <a
-              style={{ display: showDonationInput ? "none" : "inline" }}
-              onClick={e => {
-                setShowDonationInput(true);
-              }}
-            >
-              [+] Add a donation/BackaBuddy link
-            </a>
-            <input
-              className="add-link-modal-input"
-              onChange={event => {
-                setDonationLink(event.target.value);
-              }}
-              style={{ display: showDonationInput ? "block" : "none" }}
-              type="text"
-              placeholder="Donation Link"
-              value={donationLink}
-            />
-          </div>
+          <input
+            className="add-link-modal-input"
+            onChange={event => {
+              setPhoneNumber(event.target.value);
+            }}
+            type="text"
+            placeholder="Contact Number (optional)"
+            value={phoneNumber}
+          />
+          <input
+            className="add-link-modal-input"
+            onChange={event => {
+              setDonationLink(event.target.value);
+            }}
+            type="text"
+            placeholder="Donation Link"
+            value={donationLink}
+          />
           {error && <div style={{ marginTop: 8 }}>{error}</div>}
         </div>
       )}
