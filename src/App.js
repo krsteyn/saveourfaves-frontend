@@ -254,7 +254,9 @@ class App extends React.Component {
               textAlign: "center"
             }}
           >
-            <Title level={1}>3 weeks can kill a business</Title>
+            <Title level={1} style={{ color: "black" }}>
+              3 weeks can kill a business
+            </Title>
             <p className="font-body-custom">
               Businesses have many fixed costs: rent, labour, loan repayments,
               insurance, supplies, repairs - and the list goes on. Even
