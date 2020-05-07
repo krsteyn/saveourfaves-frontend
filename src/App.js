@@ -214,10 +214,7 @@ class App extends React.Component {
                 </p>
               </div>
               <div className="upper-picture-layout">
-                <img
-                  className="suggested-place-custom"
-                  src="https://media.defense.gov/2019/Jul/30/2002164249/-1/-1/0/190730-A-HG995-1002.PNG"
-                />
+                <img className="suggested-place-custom" src="/SYL-img-1.jpg" />
               </div>
             </Row>
           </div>
